@@ -1,4 +1,4 @@
-// O FormSubmit já faz o envio e redireciona. 
+// O FormSubmit já faz o envio e redireciona para obrigado.html.
 // Se quiser feedback instantâneo sem sair da página, descomente abaixo e remova o action do formulário.
 /*
 document.getElementById('contactForm').addEventListener('submit', function(event) {
