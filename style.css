@@ -48,6 +48,15 @@ header {
   margin-bottom: 18px;
   color: var(--branco);
 }
+.logo-sky {
+  max-width: 170px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 18px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 .gold {
   color: var(--dourado);
 }
@@ -166,16 +175,7 @@ header {
   height: 170px;
   object-fit: cover;
   display: block;
-  .logo-sky {
-  max-width: 170px;
-  width: 100%;
-  height: auto;
-  margin-bottom: 18px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
-
 .gallery-logo {
   background: #fff;
   padding: 12px;
@@ -184,7 +184,6 @@ header {
   object-fit: contain;
 }
 
-/* Responsivo para galeria */
 @media (max-width: 900px) {
   .gallery-grid img { height: 120px; }
 }
@@ -256,15 +255,25 @@ header {
   text-align: left;
 }
 .lazer-list li {
+  display: flex;
+  align-items: center;
   background: #222;
   border: 1px solid var(--dourado);
   border-radius: 9px;
-  margin-bottom: 9px;
-  padding: 8px 16px;
+  margin-bottom: 16px;
+  padding: 10px 18px;
   font-size: 1.08rem;
   color: var(--dourado);
   font-weight: 500;
+  gap: 16px;
   transition: background 0.18s, color 0.18s;
+}
+.lazer-list li::before {
+  content: "★";
+  color: var(--dourado);
+  font-size: 1.20rem;
+  margin-right: 14px;
+  flex-shrink: 0;
 }
 .lazer-list li:hover {
   background: var(--dourado);
