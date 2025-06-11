@@ -29,6 +29,17 @@ header {
   text-align: center;
   border-bottom: 2px solid var(--dourado);
 }
+.logo-sky-main {
+  max-width: 220px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 24px;
+  margin-top: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  filter: drop-shadow(0 4px 32px #BFA14A44);
+}
 .header-content h1 {
   font-family: var(--fonte-titulo);
   font-size: 2.8rem;
@@ -47,15 +58,6 @@ header {
   font-size: 1.1rem;
   margin-bottom: 18px;
   color: var(--branco);
-}
-.logo-sky {
-  max-width: 170px;
-  width: 100%;
-  height: auto;
-  margin-bottom: 18px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 .gold {
   color: var(--dourado);
@@ -131,7 +133,7 @@ header {
   height: 42px;
 }
 
-/* Galeria grid para imagens visíveis e clicáveis */
+/* Galeria vertical: uma imagem embaixo da outra, centralizada e responsiva */
 .gallery {
   margin: 32px auto 0 auto;
   text-align: center;
@@ -148,50 +150,45 @@ header {
   margin-top: 12px;
   font-style: italic;
 }
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 18px;
-  justify-content: center;
-  align-items: stretch;
+.gallery-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
   margin-top: 18px;
 }
-.gallery-grid a {
+.gallery-img-link {
   display: block;
-  border-radius: 14px;
-  overflow: hidden;
-  border: 2.5px solid var(--dourado);
-  background: var(--branco);
-  box-shadow: 0 2px 24px #0005;
-  transition: transform 0.15s, box-shadow 0.15s, border 0.15s;
-}
-.gallery-grid a:hover {
-  transform: scale(1.08);
-  box-shadow: 0 2px 32px #BFA14A99;
-  border: 2.5px solid var(--vermelho);
-}
-.gallery-grid img {
   width: 100%;
-  height: 170px;
-  object-fit: cover;
+  max-width: 540px;
+  transition: transform 0.16s, box-shadow 0.16s;
+  border-radius: 16px;
+  box-shadow: 0 2px 24px #0005;
+  border: 2px solid var(--dourado);
+  background: var(--branco);
+  margin: 0 auto;
+}
+.gallery-img-link:hover {
+  transform: scale(1.03);
+  border: 2px solid var(--vermelho);
+  box-shadow: 0 4px 40px #BFA14A99;
+}
+.gallery-img-link img {
+  width: 100%;
+  height: auto;
   display: block;
-}
-.gallery-logo {
-  background: #fff;
-  padding: 12px;
-  border-radius: 18px;
-  box-shadow: 0 2px 24px #0002;
-  object-fit: contain;
+  border-radius: 16px;
+  object-fit: cover;
 }
 
-@media (max-width: 900px) {
-  .gallery-grid img { height: 120px; }
-}
-@media (max-width: 600px) {
-  .gallery-grid { gap: 8px; }
-  .gallery-grid img { height: 90px; }
+/* Responsivo para galeria vertical */
+@media (max-width: 700px) {
+  .gallery-img-link, .gallery-img-link img {
+    max-width: 98vw;
+  }
 }
 
+/* Sobre, Características e Lazer */
 .about, .features, .lazer {
   margin: 48px auto 0 auto;
   background: #191919;
@@ -245,13 +242,19 @@ header {
   color: var(--branco);
 }
 
+/* Lazer - melhor espaçamento dos tópicos */
+.lazer-list-outer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
 .lazer-list {
   list-style: none;
   padding: 0;
   margin: 0 auto;
-  max-width: 500px;
-  columns: 1;
-  column-gap: 0;
+  max-width: 700px;
+  columns: 2;
+  column-gap: 48px;
   text-align: left;
 }
 .lazer-list li {
@@ -259,14 +262,15 @@ header {
   align-items: center;
   background: #222;
   border: 1px solid var(--dourado);
-  border-radius: 9px;
-  margin-bottom: 16px;
-  padding: 10px 18px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  padding: 11px 22px;
   font-size: 1.08rem;
   color: var(--dourado);
   font-weight: 500;
   gap: 16px;
-  transition: background 0.18s, color 0.18s;
+  box-shadow: 0 1px 7px #0002;
+  transition: background 0.18s, color 0.18s, border 0.18s;
 }
 .lazer-list li::before {
   content: "★";
@@ -278,17 +282,12 @@ header {
 .lazer-list li:hover {
   background: var(--dourado);
   color: var(--preto);
+  border: 1px solid var(--vermelho);
 }
-@media (min-width: 600px) {
+@media (max-width: 900px) {
   .lazer-list {
-    columns: 2;
-    max-width: 740px;
-  }
-}
-@media (min-width: 900px) {
-  .lazer-list {
-    columns: 3;
-    max-width: 980px;
+    columns: 1;
+    max-width: 98vw;
   }
 }
 
