@@ -9,6 +9,10 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Botão Flutuante WhatsApp -->
+  <a href="https://wa.me/message/BOD7PZGF3RWLF1" class="whatsapp-float" target="_blank" aria-label="Fale pelo WhatsApp">
+    <img src="https://img.icons8.com/color/60/000000/whatsapp--v1.png" alt="WhatsApp">
+  </a>
   <!-- Menu Suspenso -->
   <nav class="navbar">
     <div class="navbar-container">
@@ -18,6 +22,7 @@
       <button class="navbar-toggle" aria-label="Abrir menu">&#9776;</button>
       <ul class="navbar-menu">
         <li><a href="#galeria">Imagens</a></li>
+        <li><a href="#mapa">Localização</a></li>
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#caracteristicas">Características</a></li>
         <li><a href="#lazer">Lazer e Conveniência</a></li>
@@ -80,6 +85,21 @@
       <button class="carousel-btn carousel-btn-right" aria-label="Próxima imagem">&#10095;</button>
     </div>
     <p class="gallery-tip">Passe para o lado ou clique para ampliar.</p>
+  </section>
+
+  <!-- MAPA DE LOCALIZAÇÃO -->
+  <section class="location-map-section" id="mapa">
+    <h2>Localização do Empreendimento</h2>
+    <iframe 
+      class="location-map-iframe"
+      src="https://www.google.com/maps?q=Rua+Dr+Mario+Guimaraes,+Nova+Iguaçu,+RJ&output=embed"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+    <p style="margin-top:10px;color:#ccc;">
+      Rua Doutor Mário Guimarães, Nova Iguaçu – Ao lado do Hotel Mercure
+    </p>
   </section>
 
   <section class="about container" id="sobre">
@@ -157,65 +177,6 @@
       </ul>
     </div>
   </section>
-  <!-- ...demais partes do HTML permanecem iguais acima... -->
-
-  <section class="gallery container" id="galeria">
-    <h2 class="section-title">Imagens do Projeto</h2>
-    <div class="carousel-wrapper">
-      <button class="carousel-btn carousel-btn-left" aria-label="Imagem anterior">&#10094;</button>
-      <div class="carousel carousel-full" id="carousel">
-        <div class="carousel-item">
-          <a href="https://i.ibb.co/VRR1T6q/Whats-App-Image-2025-06-09-at-16-30-39.webp" target="_blank">
-            <img src="https://i.ibb.co/VRR1T6q/Whats-App-Image-2025-06-09-at-16-30-39.webp" alt="Área de lazer Sky Mario Guimarães">
-          </a>
-        </div>
-        <div class="carousel-item">
-          <a href="https://i.ibb.co/9kfdfgpp/Whats-App-Image-2025-06-09-at-16-30-39-1.webp" target="_blank">
-            <img src="https://i.ibb.co/9kfdfgpp/Whats-App-Image-2025-06-09-at-16-30-39-1.webp" alt="Vista aérea Nova Iguaçu">
-          </a>
-        </div>
-        <div class="carousel-item">
-          <a href="https://i.ibb.co/bjwCGWcL/Whats-App-Image-2025-06-09-at-17-45-20-1.jpg" target="_blank">
-            <img src="https://i.ibb.co/bjwCGWcL/Whats-App-Image-2025-06-09-at-17-45-20-1.jpg" alt="Fachada moderna Sky Mario Guimarães">
-          </a>
-        </div>
-        <div class="carousel-item">
-          <a href="https://i.ibb.co/Zz625wsx/Whats-App-Image-2025-06-09-at-17-45-19.jpg" target="_blank">
-            <img src="https://i.ibb.co/Zz625wsx/Whats-App-Image-2025-06-09-at-17-45-19.jpg" alt="Piscina e lazer Sky Mario Guimarães">
-          </a>
-        </div>
-        <div class="carousel-item">
-          <a href="https://i.ibb.co/DPWBhv5j/Whats-App-Image-2025-06-09-at-17-45-20.jpg" target="_blank">
-            <img src="https://i.ibb.co/DPWBhv5j/Whats-App-Image-2025-06-09-at-17-45-20.jpg" alt="Mais lazer Sky Mario Guimarães">
-          </a>
-        </div>
-        <div class="carousel-item">
-          <a href="https://i.ibb.co/Y4gLZ8Qb/dji-fly-20250605-114318-0013-1749134582534-photo.jpg" target="_blank">
-            <img src="https://i.ibb.co/Y4gLZ8Qb/dji-fly-20250605-114318-0013-1749134582534-photo.jpg" alt="Vista panorâmica aérea Sky Mario Guimarães">
-          </a>
-        </div>
-      </div>
-      <button class="carousel-btn carousel-btn-right" aria-label="Próxima imagem">&#10095;</button>
-    </div>
-    <p class="gallery-tip">Passe para o lado ou clique para ampliar.</p>
-  </section>
-
-  <!-- NOVA SESSÃO MAPA -->
-  <section class="location-map-section" id="mapa">
-    <h2>Localização do Empreendimento</h2>
-    <iframe 
-      class="location-map-iframe"
-      src="https://www.google.com/maps?q=Rua+Dr+Mario+Guimaraes,+Nova+Iguaçu,+RJ&output=embed"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-    ></iframe>
-    <p style="margin-top:10px;color:#ccc;">
-      Rua Doutor Mário Guimarães, Nova Iguaçu – Ao lado do Hotel Mercure
-    </p>
-  </section>
-
-<!-- ...continuação do HTML igual... -->
 
   <section class="form-section container" id="formulario">
     <h2 class="section-title">Garanta seu Acesso Exclusivo</h2>
@@ -236,6 +197,7 @@
 
   <footer>
     <div class="container">
+      <img class="footer-logo" src="https://i.ibb.co/MkWVw058/C-pia-de-450-6-LOGOS-SKY-V1-C-aprovada-curvas-Prancheta-1.png" alt="Logo Sky Mario Guimarães">
       <p>© 2025 Sky Mario Guimarães. Todos os direitos reservados.</p>
     </div>
   </footer>
