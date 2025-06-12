@@ -1,3 +1,13 @@
+// Menu suspenso responsivo
+const toggleBtn = document.querySelector('.navbar-toggle');
+const menu = document.querySelector('.navbar-menu');
+toggleBtn.addEventListener('click', () => {
+  menu.classList.toggle('open');
+});
+document.querySelectorAll('.navbar-menu a').forEach(link => {
+  link.addEventListener('click', () => { menu.classList.remove('open'); });
+});
+
 // Carousel simples para desktop e mobile
 const carousel = document.getElementById('carousel');
 const leftBtn = document.querySelector('.carousel-btn-left');
@@ -6,7 +16,7 @@ const rightBtn = document.querySelector('.carousel-btn-right');
 function scrollCarousel(direction) {
   const item = carousel.querySelector('.carousel-item');
   if (!item) return;
-  const scrollAmount = item.offsetWidth + 18; // 18px gap
+  const scrollAmount = item.offsetWidth;
   carousel.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
 }
 
