@@ -5,19 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sky Mario Guimarães | Pré-Lançamento Exclusivo</title>
   <meta name="description" content="O mais novo lançamento de alto padrão em Nova Iguaçu: Sky Mario Guimarães. Cadastre-se para ter acesso exclusivo às melhores unidades e condições.">
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Botão Flutuante WhatsApp -->
-  <a href="https://wa.me/message/BOD7PZGF3RWLF1" class="whatsapp-float" target="_blank" aria-label="Fale pelo WhatsApp">
-    <img src="https://img.icons8.com/color/60/000000/whatsapp--v1.png" alt="WhatsApp">
-  </a>
+  <!-- Menu Suspenso -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="#" class="navbar-logo">
+        <img class="logo-navbar" src="https://i.ibb.co/MkWVw058/C-pia-de-450-6-LOGOS-SKY-V1-C-aprovada-curvas-Prancheta-1.png" alt="Logo Sky Mario Guimarães">
+      </a>
+      <button class="navbar-toggle" aria-label="Abrir menu">&#9776;</button>
+      <ul class="navbar-menu">
+        <li><a href="#galeria">Imagens</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#caracteristicas">Características</a></li>
+        <li><a href="#lazer">Lazer e Conveniência</a></li>
+        <li><a href="#formulario">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <header>
     <div class="container header-content">
-      <img class="logo-sky-main" src="https://i.ibb.co/MkWVw058/C-pia-de-450-6-LOGOS-SKY-V1-C-aprovada-curvas-Prancheta-1.png" alt="Logo Sky Mario Guimarães">
-      <h1>Sky Mario Guimarães</h1>
-      <h2>Pré-Lançamento Exclusivo em Nova Iguaçu</h2>
+      <div class="logo-sky-main-wrapper">
+        <img class="logo-sky-main" src="https://i.ibb.co/MkWVw058/C-pia-de-450-6-LOGOS-SKY-V1-C-aprovada-curvas-Prancheta-1.png" alt="Logo Sky Mario Guimarães">
+      </div>
+      <h1 class="section-title">Sky Mario Guimarães</h1>
+      <h2 class="section-title">Pré-Lançamento Exclusivo em Nova Iguaçu</h2>
       <p>
         O mais novo empreendimento de médio padrão elegante, na rua Doutor Mário Guimarães, Nova Iguaçu, ao lado do hotel Mercure.<br>
         <strong class="gold">Varanda gourmet, lazer premium, entrada facilitada. Se antecipe ao lançamento!</strong>
@@ -26,11 +41,11 @@
     </div>
   </header>
 
-  <section class="gallery container">
-    <h2>Imagens do Projeto</h2>
+  <section class="gallery container" id="galeria">
+    <h2 class="section-title">Imagens do Projeto</h2>
     <div class="carousel-wrapper">
       <button class="carousel-btn carousel-btn-left" aria-label="Imagem anterior">&#10094;</button>
-      <div class="carousel" id="carousel">
+      <div class="carousel carousel-full" id="carousel">
         <div class="carousel-item">
           <a href="https://i.ibb.co/VRR1T6q/Whats-App-Image-2025-06-09-at-16-30-39.webp" target="_blank">
             <img src="https://i.ibb.co/VRR1T6q/Whats-App-Image-2025-06-09-at-16-30-39.webp" alt="Área de lazer Sky Mario Guimarães">
@@ -67,8 +82,8 @@
     <p class="gallery-tip">Passe para o lado ou clique para ampliar.</p>
   </section>
 
-  <section class="about container">
-    <h2 class="gold">Sobre o Empreendimento</h2>
+  <section class="about container" id="sobre">
+    <h2 class="section-title">Sobre o Empreendimento</h2>
     <ul class="about-list">
       <li><strong>Nome:</strong> Sky Mario Guimarães</li>
       <li><strong>Localização:</strong> Rua Doutor Mário Guimarães, Nova Iguaçu (ao lado do Hotel Mercure)</li>
@@ -78,8 +93,8 @@
     <p class="about-copy">O Sky Mario Guimarães traz o conceito de viver bem em um endereço nobre, com arquitetura marcante, ambientes pensados para o conforto e lazer de toda família, casais, quem busca upgrade ou oportunidades de investimento.</p>
   </section>
 
-  <section class="features container">
-    <h2 class="gold">Características do Imóvel</h2>
+  <section class="features container" id="caracteristicas">
+    <h2 class="section-title">Características do Imóvel</h2>
     <div class="features-grid">
       <div>
         <h3>Bloco 1</h3>
@@ -102,43 +117,49 @@
     </div>
   </section>
 
-  <section class="lazer container">
-    <h2 class="gold">Lazer e Conveniência</h2>
-    <ul class="lazer-list-simple">
-      <li>Minimercado</li>
-      <li>Central Delivery</li>
-      <li>Coworking</li>
-      <li>Bar da piscina</li>
-      <li>Petcare</li>
-      <li>Brinquedoteca</li>
-      <li>Piscina adulto com deck molhado</li>
-      <li>Piscina infantil</li>
-      <li>Solário</li>
-      <li>Lounge externo</li>
-      <li>Playground</li>
-      <li>Sala de embarque</li>
-      <li>Facilities</li>
-      <li>Fitness externo</li>
-      <li>Espaço ioga</li>
-      <li>Academia</li>
-      <li>Bike indoor</li>
-      <li>Spa</li>
-      <li>Sauna e repouso</li>
-      <li>Sala de massagem (2)</li>
-      <li>Churrasqueira (2)</li>
-      <li>Skybar</li>
-      <li>Winebar</li>
-      <li>Espaço gourmet</li>
-      <li>Jogos adulto</li>
-      <li>Play aventura</li>
-      <li>Espaço beleza</li>
-      <li>Salão de festas</li>
-      <li>Rooftop party</li>
-    </ul>
+  <section class="lazer container" id="lazer">
+    <h2 class="section-title">Lazer e Conveniência</h2>
+    <div class="lazer-list-columns">
+      <ul>
+        <li>Minimercado</li>
+        <li>Central Delivery</li>
+        <li>Coworking</li>
+        <li>Bar da piscina</li>
+        <li>Petcare</li>
+        <li>Brinquedoteca</li>
+        <li>Piscina adulto com deck molhado</li>
+        <li>Piscina infantil</li>
+        <li>Solário</li>
+        <li>Lounge externo</li>
+      </ul>
+      <ul>
+        <li>Playground</li>
+        <li>Sala de embarque</li>
+        <li>Facilities</li>
+        <li>Fitness externo</li>
+        <li>Espaço ioga</li>
+        <li>Academia</li>
+        <li>Bike indoor</li>
+        <li>Spa</li>
+        <li>Sauna e repouso</li>
+        <li>Sala de massagem (2)</li>
+      </ul>
+      <ul>
+        <li>Churrasqueira (2)</li>
+        <li>Skybar</li>
+        <li>Winebar</li>
+        <li>Espaço gourmet</li>
+        <li>Jogos adulto</li>
+        <li>Play aventura</li>
+        <li>Espaço beleza</li>
+        <li>Salão de festas</li>
+        <li>Rooftop party</li>
+      </ul>
+    </div>
   </section>
 
   <section class="form-section container" id="formulario">
-    <h2 class="gold">Garanta seu Acesso Exclusivo</h2>
+    <h2 class="section-title">Garanta seu Acesso Exclusivo</h2>
     <p>Preencha seus dados para receber todas as informações do pré-lançamento e atendimento personalizado:</p>
     <form id="contactForm" action="https://formsubmit.co/gabrielbernardodacosta@gmail.com" method="POST">
       <input type="hidden" name="_next" value="obrigado.html">
