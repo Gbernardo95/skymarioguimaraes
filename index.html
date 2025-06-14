@@ -1,104 +1,104 @@
-import React from 'react';
-import './Home.css'; // Crie um CSS semelhante à paleta da imagem
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sky Mario Guimarães</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">SKY MARIO GUIMARÃES</div>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#apartamentos">Apartamentos</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#localizacao">Localização</a>
+      <a href="#contato" class="btn-nav">Agende Sua Visita</a>
+    </nav>
+  </header>
 
-export default function Home() {
-  return (
-    <div className="home-sky-mario">
-      {/* Header */}
-      <header className="sky-header">
-        <div className="logo">SKY MARIO GUIMARÃES</div>
-        <nav>
-          <a href="#empreendimento">Sobre</a>
-          <a href="#apartamentos">Apartamentos</a>
-          <a href="#galeria">Galeria</a>
-          <a href="#localizacao">Localização</a>
-          <a href="#contato" className="btn-nav">Agende Sua Visita</a>
-        </nav>
-      </header>
-
-      {/* Hero Section */}
-      <section className="hero">
-        <h1>Bem-vindo(a) ao Sky Mario Guimarães</h1>
-        <p>
-          Viva o alto padrão em um dos endereços mais exclusivos de Guimarães. Experimente o verdadeiro significado de morar bem.
-        </p>
-        <a className="cta-btn" href="#contato">TENHO INTERESSE EM AGENDAR UMA VISITA</a>
-        <div className="features">
-          <div>Vista panorâmica incrível</div>
-          <div>Áreas de lazer completas</div>
-          <div>Segurança 24h</div>
-          <div>Localização privilegiada</div>
-        </div>
-      </section>
-
-      {/* Sobre o empreendimento */}
-      <section id="empreendimento" className="sobre">
-        <div className="sobre-img" />
-        <div className="sobre-info">
-          <h2>Um novo ícone no skyline de Guimarães</h2>
-          <p>
-            O Sky Mario Guimarães é mais que um prédio: é o seu novo lar, projetado para quem busca exclusividade, conforto e sofisticação. Com arquitetura moderna, áreas verdes e lazer para toda família.
-          </p>
-          <a className="btn-sec" href="#ficha">VER FICHA TÉCNICA</a>
-        </div>
-      </section>
-
-      {/* Apartamentos */}
-      <section id="apartamentos" className="apartamentos">
-        <div className="apt-info">
-          <h3>Seu Refúgio nas Alturas</h3>
-          <ul>
-            <li>Apartamentos de 2 a 4 quartos, todos com suítes</li>
-            <li>Vagas de garagem coberta</li>
-            <li>Varanda gourmet com vista exclusiva</li>
-            <li>Fechadura eletrônica em todas as unidades</li>
-            <li>Lazer completo: piscina, academia, salão de festas</li>
-          </ul>
-          <a className="btn-sec" href="#contato">FALE COM UM CORRETOR</a>
-        </div>
-        <div className="apt-img" />
-      </section>
-
-      {/* Galeria */}
-      <section id="galeria" className="galeria">
-        <h3>Vislumbre o Sky Mario Guimarães</h3>
-        <div className="galeria-slider">
-          <div className="galeria-img galeria-img1" />
-          <div className="galeria-img galeria-img2" />
-          <div className="galeria-img galeria-img3" />
-        </div>
-      </section>
-
-      {/* Localização */}
-      <section id="localizacao" className="localizacao">
-        <div>
-          <h4>Localização Privilegiada</h4>
-          <p>
-            O Sky Mario Guimarães está no coração da cidade, próximo a tudo que importa: supermercados, escolas, hospitais e vias de acesso rápido.
-          </p>
-          <a className="btn-sec" href="#contato">QUERO CONHECER O LOCAL!</a>
-        </div>
-        <div className="mapa">
-          {/* Incorpore o mapa aqui via iframe ou imagem */}
-        </div>
-      </section>
-
-      {/* Agende uma visita */}
-      <section id="contato" className="visita">
-        <h4>Agende uma visita e conheça o Sky Mario Guimarães</h4>
-        <p>
-          Não perca a oportunidade de morar no melhor endereço. Entre em contato para agendar sua visita!
-        </p>
-        <a className="cta-btn" href="https://wa.me/seunumerowhatsapp" target="_blank" rel="noopener noreferrer">
-          QUERO CONHECER O SKY MARIO GUIMARÃES!
-        </a>
-      </section>
-
-      {/* Footer */}
-      <footer className="sky-footer">
-        <div className="logo-footer">SKY MARIO GUIMARÃES</div>
-        <div>© {new Date().getFullYear()} Sky Mario Guimarães - Todos os direitos reservados.</div>
-      </footer>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Bem-vindo(a) ao Sky Mario Guimarães</h1>
+    <p>O melhor de Guimarães espera por você. Viva o alto padrão, segurança e lazer completo em um só lugar.</p>
+    <a class="cta-btn" href="#contato">TENHO INTERESSE EM AGENDAR UMA VISITA</a>
+    <div class="features">
+      <div>Vista panorâmica</div>
+      <div>Lazer completo</div>
+      <div>Segurança 24h</div>
+      <div>Localização privilegiada</div>
     </div>
-  );
-}
+  </section>
+
+  <!-- Sobre o empreendimento -->
+  <section id="sobre" class="sobre">
+    <div class="sobre-img"></div>
+    <div class="sobre-info">
+      <h2>Um novo ícone no skyline de Guimarães</h2>
+      <p>
+        O Sky Mario Guimarães é um projeto pensado para quem busca exclusividade, conforto e sofisticação. Com arquitetura moderna, áreas verdes e lazer para toda família.
+      </p>
+      <a class="btn-sec" href="#ficha">VER FICHA TÉCNICA</a>
+    </div>
+  </section>
+
+  <!-- Apartamentos -->
+  <section id="apartamentos" class="apartamentos">
+    <div class="apt-info">
+      <h3>Seu Refúgio nas Alturas</h3>
+      <ul>
+        <li>Apartamentos de 2 a 4 quartos, todos com suítes</li>
+        <li>Vagas de garagem coberta</li>
+        <li>Varanda gourmet com vista exclusiva</li>
+        <li>Fechadura eletrônica em todas as unidades</li>
+        <li>Lazer completo: piscina, academia, salão de festas</li>
+      </ul>
+      <a class="btn-sec" href="#contato">FALE COM UM CORRETOR</a>
+    </div>
+    <div class="apt-img"></div>
+  </section>
+
+  <!-- Galeria -->
+  <section id="galeria" class="galeria">
+    <h3>Vislumbre o Sky Mario Guimarães</h3>
+    <div class="galeria-slider">
+      <div class="galeria-img galeria-img1"></div>
+      <div class="galeria-img galeria-img2"></div>
+      <div class="galeria-img galeria-img3"></div>
+    </div>
+  </section>
+
+  <!-- Localização -->
+  <section id="localizacao" class="localizacao">
+    <div>
+      <h4>Localização Privilegiada</h4>
+      <p>
+        O Sky Mario Guimarães está no coração da cidade, próximo a tudo: supermercados, escolas, hospitais e vias de acesso rápido.
+      </p>
+      <a class="btn-sec" href="#contato">QUERO CONHECER O LOCAL!</a>
+    </div>
+    <div class="mapa">
+      <!-- Incorpore o mapa aqui via iframe ou imagem -->
+    </div>
+  </section>
+
+  <!-- Agende uma visita -->
+  <section id="contato" class="visita">
+    <h4>Agende uma visita e conheça o Sky Mario Guimarães</h4>
+    <p>
+      Não perca a oportunidade de morar no melhor endereço. Entre em contato para agendar sua visita!
+    </p>
+    <a class="cta-btn" href="https://wa.me/seunumerowhatsapp" target="_blank" rel="noopener noreferrer">
+      QUERO CONHECER O SKY MARIO GUIMARÃES!
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="logo-footer">SKY MARIO GUIMARÃES</div>
+    <div>© 2025 Sky Mario Guimarães - Todos os direitos reservados.</div>
+  </footer>
+</body>
+</html>
