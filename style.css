@@ -161,6 +161,25 @@ body {
   font-size: 1.13rem;
   margin-top: 0;
 }
+.sobre-destaques {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+  margin: 26px 0 0 0;
+  padding: 0;
+  list-style: none;
+}
+.sobre-destaques li {
+  background: var(--principal-dark);
+  border: 1px solid var(--dourado);
+  border-radius: 18px;
+  padding: 9px 18px;
+  color: var(--dourado);
+  font-weight: 500;
+  font-family: var(--fonte-corpo);
+  font-size: 1.01rem;
+}
 
 /* CARACTERÍSTICAS */
 .caracteristicas-section {
@@ -175,6 +194,10 @@ body {
   font-family: var(--fonte-titulo);
   color: var(--dourado);
   margin-bottom: 22px;
+}
+.caracteristicas-section p {
+  color: var(--bege);
+  margin-bottom: 16px;
 }
 .caracteristicas-grid {
   display: flex;
@@ -206,6 +229,17 @@ body {
   text-align: left;
   font-size: 1.01rem;
 }
+.cta-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: var(--dourado);
+  font-family: var(--fonte-corpo);
+  font-size: 1.01rem;
+  text-decoration: underline;
+  transition: color .2s;
+}
+.cta-link:hover { color: var(--bege); }
+
 /* GALERIA */
 .galeria-section {
   margin: 48px auto 0 auto;
@@ -361,6 +395,15 @@ body {
 }
 .cta-btn:hover {
   background: var(--bege);
+  color: var(--principal-dark);
+}
+.cta-btn.secundario {
+  background: var(--bege);
+  color: var(--principal-dark);
+  margin-top: 12px;
+}
+.cta-btn.secundario:hover {
+  background: var(--dourado);
   color: var(--principal-dark);
 }
 .whatsapp-btn-form {
