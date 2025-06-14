@@ -1,114 +1,104 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sky Mario Guimarães</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
-</head>
-<body>
-  <header class="topo">
-    <div class="container">
-      <h1>Sky Mario Guimarães</h1>
-      <nav>
-        <ul>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#imoveis">Apartamentos</a></li>
-          <li><a href="#galeria">Galeria</a></li>
-          <li><a href="#localizacao">Localização</a></li>
-          <li><a class="btn-visita" href="#formulario">Agende sua visita</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #27372b;
+  color: #fff;
+}
 
-  <section class="hero">
-    <h2>Bem-vindo(a) ao Sky Mario Guimarães. Seu novo lar suspenso em Nova Iguaçu.</h2>
-    <p>Descubra o lançamento mais aguardado da cidade com varanda gourmet, lazer Premium e entrada facilitada.</p>
-    <a href="#formulario" class="btn">TENHO INTERESSE EM AGENDAR UMA VISITA!</a>
-  </section>
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #223025;
+  padding: 20px 40px;
+}
 
-  <section class="destaques">
-    <div class="container">
-      <ul>
-        <li>Entrada facilitada direto com a construtora</li>
-        <li>Varanda gourmet nos apartamentos</li>
-        <li>Lazer Premium com rooftop completo</li>
-        <li>Localização privilegiada no coração de Nova Iguaçu</li>
-      </ul>
-    </div>
-  </section>
+.logo {
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
 
-  <section id="sobre" class="sobre">
-    <div class="container">
-      <h3>Uma imersião no estilo de vida elevado</h3>
-      <p>Sky Mario Guimarães é um projeto que une sofisticação, conforto e praticidade, oferecendo uma experiência residencial diferenciada para quem busca mais qualidade de vida. Localizado na Rua Doutor Mário Guimarães, após o Hotel Mercure, este pré-lançamento é assinado por uma incorporadora com ampla experiência.</p>
-      <a href="#formulario" class="btn">VER FICHA TÉCNICA</a>
-    </div>
-  </section>
+.header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 500;
+  padding: 7px 18px;
+  border-radius: 20px;
+  transition: background 0.2s;
+}
 
-  <section id="imoveis" class="tipos">
-    <div class="container">
-      <h3>Seu Novo Refúgio em Nova Iguaçu</h3>
-      <p>Blocos 1 e 2 com opções de 2 e 3 quartos tipo e UpGardens.</p>
-      <ul>
-        <li>2 qts Tipo: 52,87m² a 54,58m² (312 unidades)</li>
-        <li>3 qts Tipo: 61,81m² (156 unidades)</li>
-        <li>2 qts UpGardens: 78m² a 97m² (14 unidades)</li>
-        <li>3 qts UpGardens: 104m² a 132m² (6 unidades)</li>
-      </ul>
-    </div>
-  </section>
+.header nav .btn-nav {
+  background: #e0b170;
+  color: #223025;
+}
 
-  <section id="galeria" class="galeria">
-    <div class="container">
-      <h3>Vislumbre a vida no Sky Mario Guimarães</h3>
-      <div class="carousel">
-        <img src="perspectiva-1.jpg" alt="Imagem ilustrativa 1">
-        <img src="perspectiva-2.jpg" alt="Imagem ilustrativa 2">
-        <img src="novaiguacu-aerea.jpg" alt="Vista aérea Nova Iguaçu">
-      </div>
-    </div>
-  </section>
+.header nav a:hover, .cta-btn:hover, .btn-sec:hover {
+  background: #e0b170;
+  color: #223025;
+}
 
-  <section id="lazer" class="lazer">
-    <div class="container">
-      <h3>Lazer Premium em Todos os Ambientes</h3>
-      <ul>
-        <li>Piscinas adulto e infantil, deck molhado, lounge externo</li>
-        <li>Academia completa, bike indoor, espaço ioga e spa</li>
-        <li>Skybar, winebar, gourmet, salão de festas e rooftop party</li>
-        <li>Brinquedoteca, play aventura, petcare, sala de embarque</li>
-      </ul>
-    </div>
-  </section>
+.hero {
+  text-align: center;
+  padding: 70px 20px 30px 20px;
+  background: #223025;
+}
 
-  <section id="localizacao" class="localizacao">
-    <div class="container">
-      <h3>Localização Privilegiada</h3>
-      <p>Localizado na Rua Doutor Mário Guimarães, em Nova Iguaçu, próximo ao Hotel Mercure, com fácil acesso a comércio, escolas, hospitais e transporte.</p>
-      <img src="mapa-nova-iguacu.jpg" alt="Mapa de Nova Iguaçu">
-      <a href="#formulario" class="btn">QUERO CONHECER O LOCAL!</a>
-    </div>
-  </section>
+.hero h1 {
+  font-size: 2.6em;
+  color: #e0b170;
+}
 
-  <section id="formulario" class="formulario">
-    <div class="container">
-      <h3>Agende uma visita e conheça o Sky Mario Guimarães</h3>
-      <p>Não perca essa chance de garantir o melhor lançamento da cidade. Cadastre-se para se antecipar.</p>
-      <form action="https://formsubmit.co/gabriel.bernardo.rivavendas@gmail.com" method="POST">
-        <input type="text" name="nome" placeholder="Seu nome completo" required>
-        <input type="email" name="email" placeholder="Seu e-mail" required>
-        <input type="tel" name="telefone" placeholder="Seu telefone" required>
-        <button type="submit">QUERO ME CADASTRAR</button>
-      </form>
-      <a href="https://wa.me/5521980273260" class="btn">Falar com um consultor via WhatsApp</a>
-    </div>
-  </section>
+.hero p {
+  font-size: 1.4em;
+  margin-top: 20px;
+  color: #fff;
+}
 
-  <footer>
-    <p>Sky Mario Guimarães | Todos os direitos reservados</p>
-  </footer>
-</body>
-</html>
+.cta-btn {
+  display: inline-block;
+  margin: 30px 0 10px 0;
+  background: #e0b170;
+  color: #223025;
+  font-size: 1.1em;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 25px 0;
+  flex-wrap: wrap;
+}
+
+.features div {
+  background: #27372b;
+  padding: 18px 32px;
+  border-radius: 15px;
+  font-weight: bold;
+  color: #e0b170;
+  box-shadow: 0 2px 8px #0002;
+}
+
+/* Continue com estilos semelhantes para as demais seções, adaptando conforme a estrutura HTML */
+
+.footer {
+  text-align: center;
+  background: #223025;
+  color: #e0b170;
+  padding: 24px 0;
+  margin-top: 50px;
+}
+
+.logo-footer {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
