@@ -1,124 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Sky Mario Guimarães | Launch</title>
+  <title>Sky Mario Guimarães | Lançamento</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navigation bar: name left, menu right -->
-  <nav class="navbar">
-    <div class="navbar-content">
-      <span class="dev-name">Sky Mario Guimarães</span>
-      <button class="navbar-toggle" aria-label="Toggle menu">&#9776;</button>
-      <ul class="navbar-menu">
-        <li><a href="#about">Sobre</a></li>
-        <li><a href="#features">Experiência</a></li>
-        <li><a href="#gallery">Galeria</a></li>
-        <li><a href="#location">Localização</a></li>
-        <li><a href="#cta">Contato</a></li>
-      </ul>
-    </div>
-  </nav>
+  <!-- Header Top Bar -->
+  <div class="topbar">
+    VOCÊ MERECE O MELHOR EM CADA ASPECTO DA SUA VIDA!
+  </div>
 
-  <!-- Hero/About Section -->
-  <section class="about-section" id="about">
-    <div class="about-bg"></div>
-    <div class="about-content">
-      <h1>Welcome to Sky Mario Guimarães</h1>
-      <h2>The best of Guimarães awaits you. Enjoy high standards, safety and complete leisure in one place.</h2>
-      <a href="#cta" class="cta-btn">I'm interested in scheduling a visit</a>
-    </div>
-    <div class="about-bottom-img"></div>
-  </section>
-
-  <!-- Features/Experience Section -->
-  <section class="features-section" id="features">
-    <div class="features-experience">
-      <div class="features-img-square">
-        <img src="https://i.ibb.co/Zz625wsx/Whats-App-Image-2025-06-09-at-17-45-19.jpg" alt="Experience at Sky Mario Guimarães">
+  <!-- Header/Menu -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo-title">
+        <span class="logo-name">SKY<br><span>MARIO GUIMARÃES</span></span>
       </div>
-      <div class="features-text">
-        <h2>Live the Sky Experience</h2>
-        <p>
-          At Sky Mario Guimarães, every detail is designed to provide a unique living experience. Enjoy exclusive leisure spaces, modern architecture and comfort for the whole family in a privileged location.
-        </p>
-      </div>
-    </div>
-    <div class="features-details">
-      <div class="features-list">
-        <h3>Property Features</h3>
+      <nav class="nav">
         <ul>
-          <li>2 to 4 bedroom apartments, all with suites</li>
-          <li>Covered garage spaces</li>
-          <li>Gourmet balcony with exclusive view</li>
-          <li>Electronic lock in all units</li>
-          <li>Complete leisure: swimming pool, gym, party room</li>
+          <li><a href="#about">Sobre o empreendimento</a></li>
+          <li><a href="#experience">Experiência</a></li>
+          <li><a href="#gallery">Galeria</a></li>
+          <li><a href="#location">Localização</a></li>
         </ul>
-      </div>
-      <div class="features-img-vertical">
-        <img src="https://i.ibb.co/9kfdfgpp/Whats-App-Image-2025-06-09-at-16-30-39-1.webp" alt="Property details">
+        <a class="header-cta" href="#agende">AGENDE SUA VISITA</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="about">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <h1>Bem-vindo(a) ao Sky Mario Guimarães. Viva o alto padrão no coração de Nova Iguaçu.</h1>
+      <p>Descubra o empreendimento dos seus sonhos e desfrute de uma experiência exclusiva que inspira o verdadeiro sentido de lar.</p>
+      <a class="btn-main" href="#agende">TENHO INTERESSE EM AGENDAR UMA VISITA!</a>
+      <div class="hero-icons">
+        <div>
+          <img src="https://img.icons8.com/ios-filled/40/e6c99c/gym.png"/>
+          <span>Academia Completa</span>
+        </div>
+        <div>
+          <img src="https://img.icons8.com/ios-filled/40/e6c99c/swimming-pool.png"/>
+          <span>Piscina Adulto e Infantil</span>
+        </div>
+        <div>
+          <img src="https://img.icons8.com/ios-filled/40/e6c99c/lock--v1.png"/>
+          <span>Portaria com Segurança 24h</span>
+        </div>
+        <div>
+          <img src="https://img.icons8.com/ios-filled/40/e6c99c/car--v1.png"/>
+          <span>Garagem Coberta</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Gallery Section -->
-  <section class="gallery-section" id="gallery">
-    <h2>Get a glimpse of life at Sky Mario Guimarães</h2>
-    <div class="carousel" id="carousel">
-      <div class="carousel-item"><img src="https://i.ibb.co/VRR1T6q/Whats-App-Image-2025-06-09-at-16-30-39.webp" alt="Leisure area"></div>
-      <div class="carousel-item"><img src="https://i.ibb.co/9kfdfgpp/Whats-App-Image-2025-06-09-at-16-30-39-1.webp" alt="Aerial view"></div>
-      <div class="carousel-item"><img src="https://i.ibb.co/bjwCGWcL/Whats-App-Image-2025-06-09-at-17-45-20-1.jpg" alt="Modern facade"></div>
-      <div class="carousel-item"><img src="https://i.ibb.co/Zz625wsx/Whats-App-Image-2025-06-09-at-17-45-19.jpg" alt="Pool and leisure"></div>
-      <div class="carousel-item"><img src="https://i.ibb.co/DPWBhv5j/Whats-App-Image-2025-06-09-at-17-45-20.jpg" alt="More leisure"></div>
-      <div class="carousel-item"><img src="https://i.ibb.co/Y4gLZ8Qb/dji-fly-20250605-114318-0013-1749134582534-photo.jpg" alt="Panoramic aerial view"></div>
+  <!-- Experiência -->
+  <section class="experience-section" id="experience">
+    <div class="exp-box">
+      <div class="exp-img">
+        <img src="https://i.ibb.co/Zz625wsx/Whats-App-Image-2025-06-09-at-17-45-19.jpg" alt="Fachada Sky Mario Guimarães">
+      </div>
+      <div class="exp-desc">
+        <h2>Uma imersão no melhor de Nova Iguaçu</h2>
+        <p>Bem-vindo ao Sky Mario Guimarães, um projeto inspirado no estilo contemporâneo e pensado para quem valoriza exclusividade, sofisticação e lazer completo. Localizado no coração da cidade, com arquitetura moderna e ambientes integrados para sua família.</p>
+        <a href="#agende" class="btn-secondary">VER FICHA TÉCNICA</a>
+      </div>
     </div>
-    <button class="carousel-btn carousel-btn-left">&#10094;</button>
-    <button class="carousel-btn carousel-btn-right">&#10095;</button>
+    <div class="exp-box invert">
+      <div class="exp-desc">
+        <h3>Seu Refúgio Perfeito!</h3>
+        <ul>
+          <li>Apartamentos de 2 a 4 quartos, todos com suítes</li>
+          <li>Vagas de garagem coberta</li>
+          <li>Varanda gourmet com vista exclusiva</li>
+          <li>Fechadura eletrônica em todas as unidades</li>
+          <li>Lazer completo: piscina, academia, salão de festas</li>
+        </ul>
+        <a href="#agende" class="btn-main small">FALE COM O CORRETOR</a>
+      </div>
+      <div class="exp-img">
+        <img src="https://i.ibb.co/9kfdfgpp/Whats-App-Image-2025-06-09-at-16-30-39-1.webp" alt="Vista Sky Mario Guimarães">
+      </div>
+    </div>
+  </section>
+
+  <!-- Galeria -->
+  <section class="gallery-section" id="gallery">
+    <h2>Vislumbre a Vida no Sky Mario Guimarães:</h2>
+    <div class="gallery-tabs">
+      <button class="active">DIFERENCIAIS</button>
+      <button>INFRAESTRUTURA</button>
+      <button>PLANTAS</button>
+    </div>
+    <div class="gallery-carousel" id="carousel">
+      <div class="gallery-item"><img src="https://i.ibb.co/VRR1T6q/Whats-App-Image-2025-06-09-at-16-30-39.webp" alt="Área de lazer"></div>
+      <div class="gallery-item"><img src="https://i.ibb.co/bjwCGWcL/Whats-App-Image-2025-06-09-at-17-45-20-1.jpg" alt="Fachada moderna"></div>
+      <div class="gallery-item"><img src="https://i.ibb.co/DPWBhv5j/Whats-App-Image-2025-06-09-at-17-45-20.jpg" alt="Mais lazer"></div>
+      <div class="gallery-item"><img src="https://i.ibb.co/Y4gLZ8Qb/dji-fly-20250605-114318-0013-1749134582534-photo.jpg" alt="Vista panorâmica aérea"></div>
+    </div>
     <div id="lightbox" class="lightbox">
       <span class="close">&times;</span>
       <img class="lightbox-content" id="lightbox-img">
     </div>
   </section>
 
-  <!-- Location Section -->
+  <!-- Localização -->
   <section class="location-section" id="location">
-    <h2>Premium Location</h2>
-    <iframe class="location-map-iframe"
-      src="https://www.google.com/maps?q=Rua+Dr+Mario+Guimaraes,+Nova+Iguaçu,+RJ&output=embed"
-      allowfullscreen="" loading="lazy"></iframe>
-    <p>
-      Sky Mario Guimarães is in the heart of the city, close to everything: supermarkets, schools, hospitals and fast access roads.
-    </p>
+    <div class="location-content">
+      <div class="location-info">
+        <h2>Localização Privilegiada</h2>
+        <p>
+          O Sky Mario Guimarães está estrategicamente localizado na rua mais nobre de Nova Iguaçu, ao lado do Hotel Mercure. Próximo a supermercados, escolas, hospitais e toda a conveniência que você e sua família merecem.
+        </p>
+        <a href="#agende" class="btn-secondary">QUERO CONHECER O LOCAL!</a>
+      </div>
+      <div class="location-map">
+        <iframe src="https://www.google.com/maps?q=Rua+Dr+Mario+Guimaraes,+Nova+Iguaçu,+RJ&output=embed" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="cta-section" id="cta">
-    <h2>Want to know more details?</h2>
-    <a href="https://wa.me/message/BOD7PZGF3RWLF1" class="cta-btn whatsapp-btn" target="_blank">
-      <img src="https://img.icons8.com/color/28/000000/whatsapp--v1.png" alt="WhatsApp" /> I want to know more details
-    </a>
+  <!-- Agende -->
+  <section class="agende-section" id="agende">
+    <div class="agende-bg"></div>
+    <div class="agende-content">
+      <h2>Agende uma visita e conheça o Sky Mario Guimarães.</h2>
+      <p>
+        Não perca essa oportunidade única de garantir o seu novo lar. Entre em contato agora e prepare-se para viver uma vida extraordinária!
+      </p>
+      <a href="https://wa.me/message/BOD7PZGF3RWLF1" class="btn-main dark" target="_blank">
+        QUERO CONHECER O SKY MARIO GUIMARÃES!
+      </a>
+    </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <div class="footer-inner">
-      <a href="https://ibb.co/mFDymdfV" class="footer-logo-link" target="_blank" rel="noopener">
-        <img class="footer-logo" src="https://i.ibb.co/NnVNXfc/C-pia-de-450-6-LOGOS-SKY-V1-C-aprovada-curvas-Prancheta-1-co-pia.png" alt="Sky Mario Guimarães logo">
-      </a>
-      <span class="footer-copy">
-        © 2025 Sky Mario Guimarães. All rights reserved.
-      </span>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <span class="logo-name">SKY<br><span>MARIO GUIMARÃES</span></span>
+      </div>
       <div class="footer-social">
-        <a href="https://www.instagram.com/habitar.rio?utm_source=ig_web_button_share_sheet&igsh=bGlydjg1dHU5cnpi" target="_blank" rel="noopener" title="Instagram">
-          <img src="https://img.icons8.com/ios-filled/50/e6c99c/instagram-new.png" alt="Instagram" />
+        <a href="https://www.instagram.com/habitar.rio?utm_source=ig_web_button_share_sheet&igsh=bGlydjg1dHU5cnpi" target="_blank" title="Instagram">
+          <img src="https://img.icons8.com/ios-filled/40/e6c99c/instagram-new.png" alt="Instagram">
         </a>
-        <a href="https://wa.me/message/BOD7PZGF3RWLF1" target="_blank" rel="noopener" title="WhatsApp">
-          <img src="https://img.icons8.com/ios-filled/50/e6c99c/whatsapp--v1.png" alt="WhatsApp" />
+        <a href="https://wa.me/message/BOD7PZGF3RWLF1" target="_blank" title="WhatsApp">
+          <img src="https://img.icons8.com/ios-filled/40/e6c99c/whatsapp--v1.png" alt="WhatsApp">
         </a>
       </div>
+    </div>
+    <div class="footer-copy">
+      © 2025 Sky Mario Guimarães. Todos os direitos reservados.
     </div>
   </footer>
   <script src="script.js"></script>
