@@ -34,7 +34,7 @@ body {
   padding: 0 18px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   height: 70px;
 }
 .dev-name {
@@ -51,7 +51,6 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-left: 36px;
 }
 .navbar-menu li a {
   color: var(--dourado);
@@ -81,20 +80,20 @@ body {
   .navbar-content {
     height: 58px;
     padding: 0 10px;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
   .dev-name {
     font-size: 1.2rem;
-    padding: 12px 0 6px 0;
-    width: 100%;
+    padding: 0 0 0 0;
+    width: auto;
     text-align: left;
   }
   .navbar-menu {
     position: absolute;
     top: 58px;
-    left: 0;
+    right: 0;
     background: var(--fundo-dark);
     flex-direction: column;
     width: 100vw;
@@ -128,9 +127,7 @@ body {
   }
   .navbar-toggle {
     display: block;
-    position: absolute;
-    top: 9px;
-    right: 14px;
+    position: static;
   }
 }
 
@@ -144,6 +141,7 @@ body {
   padding: 0;
   background: none;
   overflow: hidden;
+  flex-direction: column;
 }
 .about-bg {
   position: absolute;
@@ -167,23 +165,23 @@ body {
 .about-content h1 {
   font-family: var(--fonte-titulo);
   color: var(--dourado);
-  font-size: 2.3rem;
+  font-size: 2.7rem;
   margin-bottom: 16px;
 }
 .about-content h2 {
   font-family: var(--fonte-titulo);
   color: var(--dourado-light);
-  font-size: 1.25rem;
+  font-size: 1.55rem;
   margin-bottom: 34px;
   font-weight: 400;
 }
 .cta-btn {
   background: var(--dourado);
   color: var(--fundo-dark);
-  padding: 15px 44px;
+  padding: 18px 54px;
   border: none;
   border-radius: 32px;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-family: var(--fonte-titulo);
   text-decoration: none;
   font-weight: bold;
@@ -198,6 +196,19 @@ body {
   background: var(--bronze);
   color: var(--fundo-dark);
 }
+.about-bottom-img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 45vh;
+  min-height: 340px;
+  width: 100vw;
+  background: url('https://i.ibb.co/VRR1T6q/Whats-App-Image-2025-06-09-at-16-30-39.webp') center bottom/cover no-repeat;
+  opacity: 0.6;
+  z-index: 0;
+  pointer-events: none;
+}
 
 /* FEATURES */
 .features-section {
@@ -208,17 +219,17 @@ body {
 .features-experience {
   display: flex;
   align-items: center;
-  gap: 40px;
-  margin-bottom: 40px;
+  gap: 60px;
+  margin-bottom: 48px;
   flex-wrap: wrap;
 }
 .features-img-square {
-  flex: 0 0 250px;
-  width: 250px;
-  height: 250px;
+  flex: 0 0 370px;
+  width: 370px;
+  height: 370px;
   overflow: hidden;
   border-radius: 18px;
-  box-shadow: 0 2px 14px #0004, 0 0px 0px #cab17933;
+  box-shadow: 0 2px 20px #0004, 0 0px 0px #cab17933;
   background: var(--fundo-dark);
 }
 .features-img-square img {
@@ -228,54 +239,54 @@ body {
   display: block;
 }
 .features-text {
-  flex: 1 1 340px;
-  min-width: 250px;
+  flex: 1 1 400px;
+  min-width: 280px;
 }
 .features-text h2 {
   font-family: var(--fonte-titulo);
   color: var(--dourado);
-  font-size: 1.45rem;
+  font-size: 2.1rem;
   margin-bottom: 12px;
 }
 .features-text p {
   color: var(--cinza);
-  font-size: 1.12rem;
+  font-size: 1.25rem;
   margin: 0;
 }
 .features-details {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 60px;
   flex-wrap: wrap;
-  margin-top: 24px;
+  margin-top: 32px;
 }
 .features-list {
-  flex: 1 1 350px;
-  min-width: 230px;
+  flex: 1 1 430px;
+  min-width: 240px;
   background: var(--fundo-dark);
   border-radius: 18px;
-  box-shadow: 0 2px 14px #0003;
-  padding: 28px 24px;
+  box-shadow: 0 2px 20px #0003;
+  padding: 32px 28px;
 }
 .features-list h3 {
   font-family: var(--fonte-titulo);
   color: var(--dourado);
-  font-size: 1.18rem;
-  margin-bottom: 16px;
+  font-size: 1.38rem;
+  margin-bottom: 18px;
 }
 .features-list ul {
   color: var(--dourado-light);
-  padding-left: 20px;
+  padding-left: 22px;
   margin: 0;
-  font-size: 1.08rem;
+  font-size: 1.18rem;
 }
 .features-img-vertical {
-  flex: 0 0 200px;
-  width: 200px;
-  height: 280px;
+  flex: 0 0 340px;
+  width: 340px;
+  height: 470px;
   overflow: hidden;
   border-radius: 18px;
-  box-shadow: 0 2px 14px #0004, 0 0px 0px #cab17933;
+  box-shadow: 0 2px 20px #0004, 0 0px 0px #cab17933;
   background: var(--fundo);
 }
 .features-img-vertical img {
@@ -284,10 +295,28 @@ body {
   object-fit: cover;
   display: block;
 }
+@media (max-width: 1100px) {
+  .features-img-square {
+    width: 85vw;
+    height: 30vw;
+    min-width: 260px;
+    min-height: 260px;
+    max-width: 100vw;
+    max-height: 470px;
+  }
+  .features-img-vertical {
+    width: 85vw;
+    height: 50vw;
+    min-width: 220px;
+    min-height: 220px;
+    max-width: 100vw;
+    max-height: 470px;
+  }
+}
 @media (max-width: 900px) {
   .features-experience, .features-details {
     flex-direction: column;
-    gap: 22px;
+    gap: 32px;
     align-items: stretch;
   }
   .features-img-square, .features-img-vertical {
@@ -416,15 +445,15 @@ body {
 .location-section h2 {
   font-family: var(--fonte-titulo);
   color: var(--dourado);
-  font-size: 1.23rem;
+  font-size: 1.53rem;
   margin-bottom: 18px;
 }
 .location-map-iframe {
   border: 2.5px solid var(--bronze);
   border-radius: 18px;
   width: 100%;
-  height: 320px;
-  max-width: 750px;
+  height: 420px;
+  max-width: 900px;
   margin: 0 auto 14px auto;
   box-shadow: 0 4px 32px #0002;
   display: block;
@@ -433,13 +462,13 @@ body {
 .location-section p {
   color: var(--cinza);
   margin-top: 8px;
-  font-size: 1.03rem;
+  font-size: 1.13rem;
 }
 @media (max-width: 900px) {
-  .location-map-iframe { height: 200px; }
+  .location-map-iframe { height: 260px; }
 }
 @media (max-width: 600px) {
-  .location-map-iframe { height: 110px; }
+  .location-map-iframe { height: 130px; }
 }
 
 /* CTA SECTION */
@@ -455,18 +484,18 @@ body {
 .cta-section h2 {
   font-family: var(--fonte-titulo);
   color: var(--dourado);
-  font-size: 1.22rem;
+  font-size: 1.32rem;
   margin-bottom: 24px;
 }
 .cta-section .whatsapp-btn {
   background: var(--bronze);
   color: var(--fundo-dark);
-  font-size: 1.09rem;
+  font-size: 1.19rem;
   border-radius: 28px;
-  padding: 13px 32px;
+  padding: 18px 44px;
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   text-decoration: none;
   font-weight: bold;
   transition: background 0.18s, color 0.18s;
@@ -502,7 +531,7 @@ footer {
   text-decoration: none;
 }
 .footer-logo {
-  width: 70px;
+  width: 110px;
   height: auto;
   filter: drop-shadow(0 4px 20px #cab17988) brightness(1.10);
   background: #fff;
