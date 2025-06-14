@@ -1,22 +1,33 @@
 :root {
-  --preto: #181818;
-  --branco: #fff;
+  --vinho: #7B112C;
+  --vinho-dark: #4A0A1D;
   --dourado: #BFA14A;
-  --vermelho: #C0392B;
+  --branco: #fff;
   --cinza: #ececec;
+  --preto: #181818;
   --fonte-titulo: 'Playfair Display', serif;
   --fonte-corpo: 'Roboto', sans-serif;
 }
 
+body {
+  margin: 0;
+  background: var(--vinho-dark);
+  color: var(--branco);
+  font-family: var(--fonte-corpo);
+  line-height: 1.6;
+  font-size: 1.07rem;
+  scroll-behavior: smooth;
+}
+
 /* MENU SUSPENSO */
 .navbar {
-  background: var(--branco);
+  background: var(--vinho);
   border-bottom: 2px solid var(--dourado);
   font-family: var(--fonte-titulo);
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 3px 24px #0001;
+  box-shadow: 0 3px 24px #0002;
 }
 .navbar-container {
   max-width: 1140px;
@@ -33,7 +44,7 @@
   width: auto;
   margin-right: 18px;
   filter: drop-shadow(0 2px 12px #BFA14A55) brightness(1.2) contrast(1.09);
-  background: #fff;
+  background: var(--branco);
   border-radius: 18px;
   padding: 4px 12px 4px 4px;
   box-shadow: 0 2px 10px #bfa14a11;
@@ -42,7 +53,7 @@
 .navbar-logo {
   display: flex;
   align-items: center;
-  background: #fff;
+  background: var(--branco);
   border-radius: 18px;
   padding: 0 8px;
   height: 62px;
@@ -57,7 +68,7 @@
   transition: max-height 0.3s;
 }
 .navbar-menu li a {
-  color: var(--preto);
+  color: var(--dourado);
   font-weight: bold;
   text-decoration: none;
   font-size: 1.07rem;
@@ -65,15 +76,16 @@
   border-radius: 8px;
   transition: background 0.15s, color 0.15s;
   font-family: var(--fonte-corpo);
+  background: transparent;
 }
 .navbar-menu li a:hover, .navbar-menu li a:focus {
   background: var(--dourado);
-  color: var(--preto);
+  color: var(--vinho-dark);
 }
 .navbar-toggle {
   background: none;
   border: none;
-  color: var(--preto);
+  color: var(--dourado);
   font-size: 2.2rem;
   cursor: pointer;
   display: none;
@@ -94,7 +106,7 @@
     position: absolute;
     top: 66px;
     right: 0;
-    background: var(--branco);
+    background: var(--vinho);
     flex-direction: column;
     width: 100vw;
     max-width: 270px;
@@ -121,7 +133,7 @@
     width: 100%;
     padding: 13px 24px;
     border-radius: 0;
-    border-bottom: 1px solid #ececec;
+    border-bottom: 1px solid #bfa14a44;
   }
   .navbar-toggle {
     display: block;
@@ -140,7 +152,7 @@
   max-width: 330px;
   width: 100%;
   height: auto;
-  background: #fff;
+  background: var(--branco);
   border-radius: 38px;
   box-shadow: 0 6px 48px #BFA14A44, 0 1px 8px #0003;
   padding: 12px 25px 12px 25px;
@@ -150,17 +162,6 @@
   transition: box-shadow 0.15s;
 }
 
-/* FLUIDIDADE E ESPAÇAMENTO */
-body {
-  margin: 0;
-  background: var(--preto);
-  color: var(--branco);
-  font-family: var(--fonte-corpo);
-  line-height: 1.6;
-  font-size: 1.07rem;
-  scroll-behavior: smooth;
-}
-
 .container {
   max-width: 1140px;
   margin: 0 auto;
@@ -168,7 +169,7 @@ body {
 }
 
 header {
-  background: var(--preto);
+  background: var(--vinho-dark);
   color: var(--dourado);
   padding: 48px 0 40px 0;
   text-align: center;
@@ -199,11 +200,11 @@ header .section-title {
   color: var(--dourado);
 }
 .red {
-  color: var(--vermelho);
+  color: var(--vinho);
 }
 .cta-btn {
   background: var(--dourado);
-  color: var(--preto);
+  color: var(--vinho-dark);
   padding: 15px 44px;
   border: none;
   border-radius: 32px;
@@ -214,12 +215,12 @@ header .section-title {
   display: inline-block;
   transition: background 0.2s, color 0.2s;
   font-family: var(--fonte-titulo);
-  box-shadow: 0 2px 12px #0005;
+  box-shadow: 0 2px 12px #0002;
   letter-spacing: 1px;
   cursor: pointer;
 }
 .cta-btn:hover {
-  background: var(--vermelho);
+  background: var(--vinho);
   color: var(--branco);
 }
 .whatsapp-btn, .whatsapp-btn-form {
@@ -227,14 +228,14 @@ header .section-title {
   align-items: center;
   gap: 8px;
   margin: 14px auto 0 auto;
-  background: var(--vermelho);
-  color: var(--branco);
+  background: var(--dourado);
+  color: var(--vinho-dark);
   border-radius: 25px;
   padding: 12px 28px;
   font-size: 1.05rem;
   font-weight: bold;
   text-decoration: none;
-  transition: background 0.2s;
+  transition: background 0.2s, color 0.2s;
   box-shadow: 0 2px 7px #0002;
   border: none;
   font-family: var(--fonte-corpo);
@@ -244,8 +245,8 @@ header .section-title {
   height: 28px;
 }
 .whatsapp-btn:hover, .whatsapp-btn-form:hover {
-  background: var(--dourado);
-  color: var(--preto);
+  background: var(--vinho);
+  color: var(--dourado);
 }
 .whatsapp-float {
   position: fixed;
@@ -262,7 +263,7 @@ header .section-title {
   transition: background 0.2s;
 }
 .whatsapp-float:hover {
-  background: var(--vermelho);
+  background: var(--vinho);
 }
 .whatsapp-float img {
   width: 42px;
@@ -285,7 +286,7 @@ header .section-title {
   width: 100vw;
   margin-left: 50%;
   transform: translateX(-50%);
-  background: #191919;
+  background: var(--vinho-dark);
 }
 .carousel-item {
   min-width: 100vw;
@@ -307,7 +308,7 @@ header .section-title {
   max-height: 480px;
   min-height: 180px;
   object-fit: contain;
-  background: #191919;
+  background: var(--vinho-dark);
   display: block;
   border-radius: 0;
   border-bottom: 2px solid #bfa14a44;
@@ -330,7 +331,7 @@ header .section-title {
   top: 50%;
   z-index: 2;
   background: var(--dourado);
-  color: var(--preto);
+  color: var(--vinho-dark);
   border: none;
   font-size: 2.1rem;
   cursor: pointer;
@@ -343,9 +344,10 @@ header .section-title {
   transform: translateY(-50%);
   opacity: 0.93;
   transition: background 0.16s, color 0.16s;
+  box-shadow: 0 2px 14px #0002;
 }
 .carousel-btn:active, .carousel-btn:focus {
-  background: var(--vermelho);
+  background: var(--vinho);
   color: #fff;
 }
 .carousel-btn-left {
@@ -366,7 +368,7 @@ header .section-title {
 /* MAPA */
 .location-map-section {
   margin: 48px auto 0 auto;
-  background: #191919;
+  background: var(--vinho);
   border-radius: 18px;
   box-shadow: 0 2px 18px #0004;
   padding: 34px 22px;
@@ -388,6 +390,7 @@ header .section-title {
   margin: 0 auto;
   box-shadow: 0 4px 32px #0002;
   display: block;
+  background: var(--branco);
 }
 @media (max-width: 900px) {
   .location-map-iframe { height: 270px; }
@@ -398,7 +401,7 @@ header .section-title {
 
 .about, .features, .lazer {
   margin: 48px auto 0 auto;
-  background: #191919;
+  background: var(--vinho);
   border-radius: 18px;
   box-shadow: 0 2px 18px #0004;
   padding: 34px 22px;
@@ -438,13 +441,13 @@ header .section-title {
 }
 .features-grid > div {
   min-width: 210px;
-  background: #222;
+  background: var(--vinho-dark);
   border-radius: 10px;
   padding: 16px 14px;
   border: 1px solid var(--dourado);
 }
 .features-grid h3 {
-  color: var(--vermelho);
+  color: var(--dourado);
   margin-bottom: 8px;
   font-family: var(--fonte-titulo);
   font-size: 1.09rem;
@@ -473,7 +476,7 @@ header .section-title {
   max-width: 230px;
 }
 .lazer-list-columns li {
-  background: #222;
+  background: var(--vinho-dark);
   border: 1px solid var(--dourado);
   border-radius: 10px;
   padding: 10px 18px;
@@ -487,8 +490,8 @@ header .section-title {
 }
 .lazer-list-columns li:hover {
   background: var(--dourado);
-  color: var(--preto);
-  border: 1px solid var(--vermelho);
+  color: var(--vinho-dark);
+  border: 1px solid var(--vinho);
 }
 @media (max-width: 900px) {
   .lazer-list-columns {
@@ -509,7 +512,7 @@ header .section-title {
 
 .form-section {
   margin: 60px auto 0 auto;
-  background: #191919;
+  background: var(--vinho);
   border-radius: 18px;
   box-shadow: 0 2px 18px #0004;
   max-width: 480px;
@@ -533,7 +536,7 @@ header .section-title {
   font-size: 1rem;
   font-family: var(--fonte-corpo);
   background: var(--cinza);
-  color: var(--preto);
+  color: var(--vinho-dark);
 }
 #contactForm button {
   margin-top: 8px;
@@ -545,7 +548,7 @@ header .section-title {
 }
 
 footer {
-  background: #111;
+  background: var(--vinho-dark);
   color: var(--dourado);
   text-align: center;
   padding: 18px 0 8px 0;
