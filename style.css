@@ -1,83 +1,88 @@
 :root {
-  --principal: #541f07;
-  --principal-dark: #381103;
-  --dourado: #bfa14a;
-  --bege: #79603a;
+  --fundo: #24180f;
+  --fundo-dark: #18100a;
+  --dourado: #c9b16f;
+  --dourado-claro: #f7e1a5;
+  --bronze: #b78b4a;
   --branco: #fff;
+  --cinza: #beb5b0;
   --fonte-titulo: 'Playfair Display', serif;
   --fonte-corpo: 'Roboto', sans-serif;
 }
 
 body {
   margin: 0;
-  background: var(--principal);
-  color: var(--bege);
+  background: var(--fundo);
+  color: var(--dourado-claro);
   font-family: var(--fonte-corpo);
   line-height: 1.7;
-  font-size: 1.08rem;
+  font-size: 1.09rem;
 }
 
 /* MENU SUSPENSO */
 .navbar {
-  background: var(--principal-dark);
+  background: var(--fundo-dark);
   border-bottom: 2px solid var(--dourado);
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 3px 24px #0002;
+  box-shadow: 0 3px 24px #0004;
 }
 .navbar-content {
-  max-width: 1150px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 18px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 64px;
+  height: 70px;
 }
 .logo-navbar {
-  height: 44px;
+  height: 54px;
   width: auto;
   background: var(--branco);
-  border-radius: 14px;
-  padding: 2px 10px 2px 3px;
-  box-shadow: 0 2px 10px #bfa14a11;
-  filter: drop-shadow(0 2px 12px #BFA14A55) brightness(1.13) contrast(1.07);
+  border-radius: 22px;
+  padding: 2px 16px 2px 2px;
+  box-shadow: 0 4px 24px #c9b16f33, 0 1px 8px #0002;
+  filter: drop-shadow(0 2px 18px #c9b16f99) brightness(1.17);
+  transition: box-shadow 0.2s;
+  margin-right: 15px;
 }
 .navbar-menu {
   display: flex;
-  gap: 22px;
+  gap: 26px;
   align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 .navbar-menu li a {
-  color: var(--bege);
-  font-weight: bold;
+  color: var(--dourado);
+  font-weight: 700;
   text-decoration: none;
-  font-size: 1.07rem;
-  padding: 6px 12px;
-  border-radius: 8px;
-  transition: background 0.15s, color 0.15s;
+  font-size: 1.09rem;
+  padding: 7px 17px;
+  border-radius: 10px;
   font-family: var(--fonte-corpo);
+  letter-spacing: 0.5px;
+  transition: background 0.18s, color 0.15s;
 }
 .navbar-menu li a:hover, .navbar-menu li a:focus {
   background: var(--dourado);
-  color: var(--principal-dark);
+  color: var(--fundo-dark);
 }
 .navbar-toggle {
   background: none;
   border: none;
   color: var(--dourado);
-  font-size: 2.2rem;
+  font-size: 2.3rem;
   cursor: pointer;
   display: none;
   z-index: 20;
 }
 @media (max-width: 900px) {
   .navbar-content {
-    height: 60px;
+    height: 58px;
     padding: 0 10px;
   }
   .logo-navbar {
@@ -86,24 +91,24 @@ body {
   }
   .navbar-menu {
     position: absolute;
-    top: 60px;
+    top: 58px;
     right: 0;
-    background: var(--principal-dark);
+    background: var(--fundo-dark);
     flex-direction: column;
     width: 100vw;
-    max-width: 250px;
+    max-width: 260px;
     gap: 0;
     text-align: left;
-    box-shadow: 0 4px 32px #0005;
+    box-shadow: 0 6px 28px #0006;
     max-height: 0;
     overflow: hidden;
-    border-bottom-left-radius: 16px;
+    border-bottom-left-radius: 18px;
     align-items: flex-start;
     transition: max-height 0.3s;
   }
   .navbar-menu.open {
-    max-height: 400px;
-    padding-bottom: 10px;
+    max-height: 420px;
+    padding-bottom: 14px;
     border-bottom: 2.5px solid var(--dourado);
   }
   .navbar-menu li {
@@ -114,9 +119,9 @@ body {
   .navbar-menu li a {
     display: block;
     width: 100%;
-    padding: 13px 24px;
+    padding: 14px 26px;
     border-radius: 0;
-    border-bottom: 1px solid #bfa14a44;
+    border-bottom: 1px solid #c9b16f22;
   }
   .navbar-toggle {
     display: block;
@@ -125,9 +130,9 @@ body {
 
 /* SOBRE */
 .sobre-section {
-  background: var(--principal);
+  background: var(--fundo);
   text-align: center;
-  padding: 56px 0 32px 0;
+  padding: 62px 0 36px 0;
 }
 .sobre-container {
   max-width: 700px;
@@ -135,29 +140,29 @@ body {
   padding: 0 10px;
 }
 .sobre-logo {
-  max-width: 150px;
+  max-width: 160px;
   width: 100%;
-  margin-bottom: 18px;
+  margin-bottom: 28px;
   background: var(--branco);
-  border-radius: 24px;
-  box-shadow: 0 6px 40px #BFA14A33, 0 1px 8px #0003;
+  border-radius: 32px;
+  box-shadow: 0 8px 44px #c9b16f55, 0 1px 8px #0003;
   padding: 10px 22px;
-  filter: drop-shadow(0 8px 32px #BFA14ADD) brightness(1.09) contrast(1.05);
+  filter: drop-shadow(0 8px 32px #c9b16f90) brightness(1.10) contrast(1.05);
 }
 .sobre-section h1 {
   font-family: var(--fonte-titulo);
   color: var(--dourado);
-  font-size: 2rem;
+  font-size: 2.1rem;
   margin-bottom: 10px;
 }
 .sobre-section h2 {
   font-family: var(--fonte-titulo);
-  color: var(--bege);
-  font-size: 1.2rem;
+  color: var(--dourado-claro);
+  font-size: 1.24rem;
   margin-bottom: 22px;
 }
 .sobre-section p {
-  color: var(--bege);
+  color: var(--cinza);
   font-size: 1.13rem;
   margin-top: 0;
 }
@@ -171,7 +176,7 @@ body {
   list-style: none;
 }
 .sobre-destaques li {
-  background: var(--principal-dark);
+  background: var(--fundo-dark);
   border: 1px solid var(--dourado);
   border-radius: 18px;
   padding: 9px 18px;
@@ -183,11 +188,11 @@ body {
 
 /* CARACTERÍSTICAS */
 .caracteristicas-section {
-  margin: 48px auto 0 auto;
-  background: var(--principal-dark);
+  margin: 54px auto 0 auto;
+  background: var(--fundo-dark);
   border-radius: 18px;
   box-shadow: 0 2px 18px #0004;
-  padding: 34px 22px;
+  padding: 38px 22px;
   text-align: center;
 }
 .caracteristicas-section h2 {
@@ -196,7 +201,7 @@ body {
   margin-bottom: 22px;
 }
 .caracteristicas-section p {
-  color: var(--bege);
+  color: var(--cinza);
   margin-bottom: 16px;
 }
 .caracteristicas-grid {
@@ -207,25 +212,25 @@ body {
 }
 .caracteristicas-card {
   min-width: 210px;
-  background: var(--principal);
-  border-radius: 14px;
-  padding: 18px 14px;
+  background: var(--fundo);
+  border-radius: 18px;
+  padding: 22px 18px;
   border: 1.5px solid var(--dourado);
   box-shadow: 0 1px 12px #0002;
   margin-bottom: 18px;
   max-width: 340px;
 }
 .caracteristicas-card h3 {
-  color: var(--bege);
+  color: var(--dourado-claro);
   margin-bottom: 8px;
   font-family: var(--fonte-titulo);
-  font-size: 1.09rem;
+  font-size: 1.11rem;
   text-align: center;
 }
 .caracteristicas-card ul {
   margin: 0;
-  padding-left: 16px;
-  color: var(--bege);
+  padding-left: 18px;
+  color: var(--cinza);
   text-align: left;
   font-size: 1.01rem;
 }
@@ -238,15 +243,15 @@ body {
   text-decoration: underline;
   transition: color .2s;
 }
-.cta-link:hover { color: var(--bege); }
+.cta-link:hover { color: var(--dourado-claro); }
 
 /* GALERIA */
 .galeria-section {
-  margin: 48px auto 0 auto;
-  background: var(--principal);
+  margin: 54px auto 0 auto;
+  background: var(--fundo);
   border-radius: 18px;
   box-shadow: 0 2px 18px #0004;
-  padding: 34px 22px;
+  padding: 38px 22px;
   text-align: center;
 }
 .galeria-section h2 {
@@ -261,8 +266,8 @@ body {
   justify-content: center;
 }
 .galeria-img {
-  background: var(--principal-dark);
-  border-radius: 14px;
+  background: var(--fundo-dark);
+  border-radius: 16px;
   box-shadow: 0 2px 18px #0002;
   overflow: hidden;
   max-width: 320px;
@@ -279,9 +284,9 @@ body {
   display: block;
 }
 .galeria-img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 4px 36px #BFA14A55;
-  border-color: var(--bege);
+  transform: scale(1.04);
+  box-shadow: 0 4px 36px #c9b16f77;
+  border-color: var(--bronze);
 }
 @media (max-width: 900px) {
   .galeria-grid {
@@ -307,11 +312,11 @@ body {
 
 /* LOCALIZAÇÃO */
 .localizacao-section {
-  margin: 48px auto 0 auto;
-  background: var(--principal-dark);
+  margin: 54px auto 0 auto;
+  background: var(--fundo-dark);
   border-radius: 18px;
   box-shadow: 0 2px 18px #0004;
-  padding: 34px 22px;
+  padding: 38px 22px;
   text-align: center;
 }
 .localizacao-section h2 {
@@ -321,7 +326,7 @@ body {
   margin-bottom: 18px;
 }
 .location-map-iframe {
-  border: 2.5px solid var(--dourado);
+  border: 2.5px solid var(--bronze);
   border-radius: 18px;
   width: 100%;
   height: 320px;
@@ -332,7 +337,7 @@ body {
   background: var(--branco);
 }
 .localizacao-section p {
-  color: var(--bege);
+  color: var(--cinza);
   margin-top: 8px;
   font-size: 1.03rem;
 }
@@ -346,7 +351,7 @@ body {
 /* FORMULÁRIO */
 .form-section {
   margin: 60px auto 0 auto;
-  background: var(--principal);
+  background: var(--fundo);
   border-radius: 18px;
   box-shadow: 0 2px 18px #0004;
   max-width: 480px;
@@ -367,18 +372,18 @@ body {
 #contactForm input {
   padding: 12px;
   border-radius: 7px;
-  border: 1.5px solid var(--dourado);
+  border: 1.5px solid var(--bronze);
   font-size: 1rem;
   font-family: var(--fonte-corpo);
-  background: var(--bege);
-  color: var(--principal-dark);
+  background: var(--cinza);
+  color: var(--fundo-dark);
 }
 #contactForm button {
   margin-top: 8px;
 }
 .cta-btn {
   background: var(--dourado);
-  color: var(--principal-dark);
+  color: var(--fundo-dark);
   padding: 13px 38px;
   border: none;
   border-radius: 32px;
@@ -394,25 +399,25 @@ body {
   cursor: pointer;
 }
 .cta-btn:hover {
-  background: var(--bege);
-  color: var(--principal-dark);
+  background: var(--bronze);
+  color: var(--branco);
 }
 .cta-btn.secundario {
-  background: var(--bege);
-  color: var(--principal-dark);
+  background: var(--bronze);
+  color: var(--branco);
   margin-top: 12px;
 }
 .cta-btn.secundario:hover {
   background: var(--dourado);
-  color: var(--principal-dark);
+  color: var(--fundo-dark);
 }
 .whatsapp-btn-form {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   margin: 14px auto 0 auto;
-  background: var(--bege);
-  color: var(--principal-dark);
+  background: var(--bronze);
+  color: var(--fundo-dark);
   border-radius: 22px;
   padding: 9px 18px;
   font-size: 1.02rem;
@@ -427,21 +432,21 @@ body {
 }
 .whatsapp-btn-form:hover {
   background: var(--dourado);
-  color: var(--principal-dark);
+  color: var(--fundo-dark);
 }
 .privacy {
   font-size: 0.96rem;
-  color: #bca77e;
+  color: #d8c8ab;
   margin-top: 15px;
 }
 
 /* FOOTER */
 footer {
-  background: var(--principal-dark);
-  color: var(--bege);
+  background: var(--fundo-dark);
+  color: var(--bronze);
   text-align: center;
   padding: 22px 0 10px 0;
-  margin-top: 48px;
+  margin-top: 54px;
   font-family: var(--fonte-titulo);
   letter-spacing: 1.2px;
   font-size: 1.03rem;
@@ -452,7 +457,7 @@ footer .footer-logo {
   margin: 0 auto 10px auto;
   width: 92px;
   height: auto;
-  filter: drop-shadow(0 4px 12px #BFA14A99) brightness(1.10);
+  filter: drop-shadow(0 4px 20px #c9b16f88) brightness(1.10);
   background: #fff;
   border-radius: 16px;
   padding: 4px 10px 4px 10px;
