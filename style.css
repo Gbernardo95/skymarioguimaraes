@@ -1,589 +1,151 @@
-:root {
-  --fundo: #181825;
-  --fundo-dark: #232336;
-  --dourado: #e6c99c;
-  --dourado-light: #f7ecd5;
-  --bronze: #cab179;
-  --branco: #fff;
-  --cinza: #b5b5b8;
-  --fonte-titulo: 'Playfair Display', serif;
-  --fonte-corpo: 'Roboto', sans-serif;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sky Mario Guimarães</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      background-color: #0f1f1a;
+      color: #d6c7a1;
+    }
+    header, footer {
+      background-color: #09130f;
+      color: #d6c7a1;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #d6c7a1;
+      font-weight: bold;
+    }
+    .hero {
+      background: url('banner.jpg') no-repeat center center/cover;
+      text-align: left;
+      padding: 4rem 2rem;
+    }
+    .titulo {
+      font-size: 3rem;
+      margin: 0;
+      color: #d6c7a1;
+    }
+    .subtitulo {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      color: #d6c7a1;
+    }
+    section {
+      padding: 3rem 2rem;
+    }
+    .caracteristicas ul, .formulario form {
+      max-width: 800px;
+      margin: auto;
+    }
+    .caracteristicas li {
+      margin-bottom: 1rem;
+    }
+    .galeria img, .localizacao img {
+      width: 100%;
+      max-width: 500px;
+      display: block;
+      margin: 1rem auto;
+      border-radius: 8px;
+    }
+    form input, form button {
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      border: none;
+    }
+    form button {
+      background-color: #d6c7a1;
+      color: #0f1f1a;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    .whatsapp img {
+      width: 60px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sky Mario Guimarães</h1>
+    <nav>
+      <ul>
+        <li><a href="#caracteristicas">Características</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#localizacao">Localização</a></li>
+        <li><a href="#formulario">Cadastro</a></li>
+      </ul>
+    </nav>
+  </header>
 
-body {
-  margin: 0;
-  background: var(--fundo);
-  color: var(--dourado-light);
-  font-family: var(--fonte-corpo);
-  line-height: 1.7;
-  font-size: 1.09rem;
-}
+  <section class="hero">
+    <h2 class="titulo">Sky Mario Guimarães</h2>
+    <p class="subtitulo">2 e 3 quartos com suítes, varanda gourmet e lazer premium</p>
+  </section>
 
-/* NAVBAR */
-.navbar {
-  background: var(--fundo-dark);
-  border-bottom: 2px solid var(--dourado);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 3px 24px #0004;
-}
-.navbar-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 18px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 70px;
-}
-.dev-name {
-  color: var(--dourado);
-  font-family: var(--fonte-titulo);
-  font-size: 1.6rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-.navbar-menu {
-  display: flex;
-  gap: 26px;
-  align-items: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.navbar-menu li a {
-  color: var(--dourado);
-  font-weight: 700;
-  text-decoration: none;
-  font-size: 1.09rem;
-  padding: 7px 17px;
-  border-radius: 10px;
-  font-family: var(--fonte-corpo);
-  letter-spacing: 0.5px;
-  transition: background 0.18s, color 0.15s;
-}
-.navbar-menu li a:hover, .navbar-menu li a:focus {
-  background: var(--dourado);
-  color: var(--fundo-dark);
-}
-.navbar-toggle {
-  background: none;
-  border: none;
-  color: var(--dourado);
-  font-size: 2.3rem;
-  cursor: pointer;
-  display: none;
-  z-index: 20;
-}
-@media (max-width: 900px) {
-  .navbar-content {
-    height: 58px;
-    padding: 0 10px;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .dev-name {
-    font-size: 1.2rem;
-    padding: 0 0 0 0;
-    width: auto;
-    text-align: left;
-  }
-  .navbar-menu {
-    position: absolute;
-    top: 58px;
-    right: 0;
-    background: var(--fundo-dark);
-    flex-direction: column;
-    width: 100vw;
-    max-width: 260px;
-    gap: 0;
-    text-align: left;
-    box-shadow: 0 6px 28px #0006;
-    max-height: 0;
-    overflow: hidden;
-    border-bottom-left-radius: 18px;
-    align-items: flex-start;
-    transition: max-height 0.3s;
-    margin-left: 0;
-  }
-  .navbar-menu.open {
-    max-height: 420px;
-    padding-bottom: 14px;
-    border-bottom: 2.5px solid var(--dourado);
-  }
-  .navbar-menu li {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-  }
-  .navbar-menu li a {
-    display: block;
-    width: 100%;
-    padding: 14px 26px;
-    border-radius: 0;
-    border-bottom: 1px solid #d6c29922;
-  }
-  .navbar-toggle {
-    display: block;
-    position: static;
-  }
-}
+  <section id="caracteristicas">
+    <h3>Características do Empreendimento</h3>
+    <ul>
+      <li>Blocos com apartamentos de 2 e 3 quartos (tipo e UpGardens)</li>
+      <li>Varanda gourmet em todas as unidades</li>
+      <li>Rooftop com Skybar, Winebar, Espaço Gourmet e mais</li>
+      <li>Lazer completo: piscina, academia, spa, brinquedoteca, petcare</li>
+      <li>Entrada facilitada e financiamento via Caixa Econômica</li>
+    </ul>
+  </section>
 
-/* HERO/ABOUT */
-.about-section {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 440px;
-  padding: 0;
-  background: none;
-  overflow: hidden;
-  flex-direction: column;
-}
-.about-bg {
-  position: absolute;
-  inset: 0;
-  background: url('https://i.ibb.co/VRR1T6q/Whats-App-Image-2025-06-09-at-16-30-39.webp') center center/cover no-repeat;
-  opacity: 0.6;
-  z-index: 0;
-}
-.about-content {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  max-width: 750px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 70px 18px 70px 18px;
-  background: rgba(24,24,37,0.72);
-  border-radius: 20px;
-  box-shadow: 0 6px 54px #18182566;
-}
-.about-content h1 {
-  font-family: var(--fonte-titulo);
-  color: var(--dourado);
-  font-size: 2.7rem;
-  margin-bottom: 16px;
-}
-.about-content h2 {
-  font-family: var(--fonte-titulo);
-  color: var(--dourado-light);
-  font-size: 1.55rem;
-  margin-bottom: 34px;
-  font-weight: 400;
-}
-.cta-btn {
-  background: var(--dourado);
-  color: var(--fundo-dark);
-  padding: 18px 54px;
-  border: none;
-  border-radius: 32px;
-  font-size: 1.25rem;
-  font-family: var(--fonte-titulo);
-  text-decoration: none;
-  font-weight: bold;
-  margin: 18px auto 0 auto;
-  display: inline-block;
-  box-shadow: 0 2px 12px #0002;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
-}
-.cta-btn:hover {
-  background: var(--bronze);
-  color: var(--fundo-dark);
-}
-.about-bottom-img {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 45vh;
-  min-height: 340px;
-  width: 100vw;
-  background: url('https://i.ibb.co/VRR1T6q/Whats-App-Image-2025-06-09-at-16-30-39.webp') center bottom/cover no-repeat;
-  opacity: 0.6;
-  z-index: 0;
-  pointer-events: none;
-}
+  <section id="galeria">
+    <h3>Galeria de Imagens</h3>
+    <img src="perspectiva-1.jpg" alt="Fachada do empreendimento">
+    <img src="perspectiva-2.jpg" alt="Vista da varanda gourmet">
+    <img src="novaiguacu-aerea.jpg" alt="Vista aérea da localização">
+  </section>
 
-/* FEATURES */
-.features-section {
-  margin: 56px auto 0 auto;
-  max-width: 1100px;
-  padding: 0 18px;
-}
-.features-experience {
-  display: flex;
-  align-items: center;
-  gap: 60px;
-  margin-bottom: 48px;
-  flex-wrap: wrap;
-}
-.features-img-square {
-  flex: 0 0 370px;
-  width: 370px;
-  height: 370px;
-  overflow: hidden;
-  border-radius: 18px;
-  box-shadow: 0 2px 20px #0004, 0 0px 0px #cab17933;
-  background: var(--fundo-dark);
-}
-.features-img-square img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.features-text {
-  flex: 1 1 400px;
-  min-width: 280px;
-}
-.features-text h2 {
-  font-family: var(--fonte-titulo);
-  color: var(--dourado);
-  font-size: 2.1rem;
-  margin-bottom: 12px;
-}
-.features-text p {
-  color: var(--cinza);
-  font-size: 1.25rem;
-  margin: 0;
-}
-.features-details {
-  display: flex;
-  align-items: center;
-  gap: 60px;
-  flex-wrap: wrap;
-  margin-top: 32px;
-}
-.features-list {
-  flex: 1 1 430px;
-  min-width: 240px;
-  background: var(--fundo-dark);
-  border-radius: 18px;
-  box-shadow: 0 2px 20px #0003;
-  padding: 32px 28px;
-}
-.features-list h3 {
-  font-family: var(--fonte-titulo);
-  color: var(--dourado);
-  font-size: 1.38rem;
-  margin-bottom: 18px;
-}
-.features-list ul {
-  color: var(--dourado-light);
-  padding-left: 22px;
-  margin: 0;
-  font-size: 1.18rem;
-}
-.features-img-vertical {
-  flex: 0 0 340px;
-  width: 340px;
-  height: 470px;
-  overflow: hidden;
-  border-radius: 18px;
-  box-shadow: 0 2px 20px #0004, 0 0px 0px #cab17933;
-  background: var(--fundo);
-}
-.features-img-vertical img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-@media (max-width: 1100px) {
-  .features-img-square {
-    width: 85vw;
-    height: 30vw;
-    min-width: 260px;
-    min-height: 260px;
-    max-width: 100vw;
-    max-height: 470px;
-  }
-  .features-img-vertical {
-    width: 85vw;
-    height: 50vw;
-    min-width: 220px;
-    min-height: 220px;
-    max-width: 100vw;
-    max-height: 470px;
-  }
-}
-@media (max-width: 900px) {
-  .features-experience, .features-details {
-    flex-direction: column;
-    gap: 32px;
-    align-items: stretch;
-  }
-  .features-img-square, .features-img-vertical {
-    margin: 0 auto;
-  }
-}
+  <section id="localizacao">
+    <h3>Localização Privilegiada</h3>
+    <p>Rua Doutor Mário Guimarães, Nova Iguaçu - ao lado do Hotel Mercure, no coração da cidade.</p>
+    <img src="mapa-nova-iguacu.jpg" alt="Mapa localização Sky Mario Guimarães">
+  </section>
 
-/* GALLERY */
-.gallery-section {
-  margin: 54px auto 0 auto;
-  max-width: 1100px;
-  padding: 0 18px;
-  text-align: center;
-}
-.gallery-section h2 {
-  font-family: var(--fonte-titulo);
-  color: var(--dourado);
-  margin-bottom: 30px;
-}
-.carousel {
-  display: flex;
-  gap: 22px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding-bottom: 8px;
-}
-.carousel-item {
-  min-width: 320px;
-  max-width: 320px;
-  flex: 0 0 320px;
-  background: var(--fundo-dark);
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 2px 18px #0002;
-  border: 2px solid var(--dourado);
-  transition: transform .18s, box-shadow .18s;
-  cursor: pointer;
-}
-.carousel-item img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  display: block;
-}
-.carousel-item:hover {
-  transform: scale(1.04);
-  box-shadow: 0 4px 36px #cab17977;
-  border-color: var(--bronze);
-}
-.carousel-btn {
-  background: var(--dourado);
-  color: var(--fundo-dark);
-  border: none;
-  font-size: 2.1rem;
-  cursor: pointer;
-  border-radius: 50%;
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  opacity: 0.95;
-  transition: background 0.16s, color 0.16s;
-  box-shadow: 0 2px 14px #0002;
-  z-index: 2;
-}
-.carousel-btn-left { left: 10px; }
-.carousel-btn-right { right: 10px; }
-@media (max-width: 600px) {
-  .carousel {
-    gap: 8px;
-  }
-  .carousel-item,
-  .carousel-item img {
-    min-width: 92vw;
-    max-width: 92vw;
-    height: 38vw;
-    max-height: 200px;
-  }
-}
+  <section id="formulario">
+    <h3>Cadastre-se para se antecipar ao lançamento</h3>
+    <form action="agradecimento.html" method="POST">
+      <input type="text" name="nome" placeholder="Seu nome" required>
+      <input type="email" name="email" placeholder="Seu e-mail" required>
+      <input type="tel" name="telefone" placeholder="Seu telefone" required>
+      <button type="submit">Quero ser avisado</button>
+    </form>
+  </section>
 
-/* LIGHTBOX */
-.lightbox {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  left: 0; top: 0; width: 100vw; height: 100vh;
-  background: rgba(0,0,0,0.84);
-  justify-content: center;
-  align-items: center;
-}
-.lightbox-content {
-  max-width: 98vw;
-  max-height: 90vh;
-  border-radius: 16px;
-  box-shadow: 0 6px 40px #cab179;
-  border: 4px solid var(--dourado);
-  display: block;
-}
-.lightbox .close {
-  color: var(--dourado);
-  position: absolute;
-  top: 25px;
-  right: 48px;
-  font-size: 3.2rem;
-  font-weight: bold;
-  cursor: pointer;
-  z-index: 10001;
-  transition: color .2s;
-}
-.lightbox .close:hover { color: var(--bronze); }
+  <a href="https://wa.me/5521980273260" class="whatsapp" target="_blank">
+    <img src="whatsapp-icon.png" alt="Fale no WhatsApp">
+  </a>
 
-/* LOCATION */
-.location-section {
-  margin: 54px auto 0 auto;
-  max-width: 1100px;
-  background: var(--fundo-dark);
-  border-radius: 18px;
-  box-shadow: 0 2px 18px #0004;
-  padding: 38px 22px;
-  text-align: center;
-}
-.location-section h2 {
-  font-family: var(--fonte-titulo);
-  color: var(--dourado);
-  font-size: 1.53rem;
-  margin-bottom: 18px;
-}
-.location-map-iframe {
-  border: 2.5px solid var(--bronze);
-  border-radius: 18px;
-  width: 100%;
-  height: 420px;
-  max-width: 900px;
-  margin: 0 auto 14px auto;
-  box-shadow: 0 4px 32px #0002;
-  display: block;
-  background: var(--branco);
-}
-.location-section p {
-  color: var(--cinza);
-  margin-top: 8px;
-  font-size: 1.13rem;
-}
-@media (max-width: 900px) {
-  .location-map-iframe { height: 260px; }
-}
-@media (max-width: 600px) {
-  .location-map-iframe { height: 130px; }
-}
-
-/* CTA SECTION */
-.cta-section {
-  margin: 54px auto 0 auto;
-  max-width: 700px;
-  background: var(--fundo);
-  border-radius: 18px;
-  box-shadow: 0 2px 18px #0004;
-  padding: 44px 16px 38px 16px;
-  text-align: center;
-}
-.cta-section h2 {
-  font-family: var(--fonte-titulo);
-  color: var(--dourado);
-  font-size: 1.32rem;
-  margin-bottom: 24px;
-}
-.cta-section .whatsapp-btn {
-  background: var(--bronze);
-  color: var(--fundo-dark);
-  font-size: 1.19rem;
-  border-radius: 28px;
-  padding: 18px 44px;
-  display: inline-flex;
-  align-items: center;
-  gap: 14px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.18s, color 0.18s;
-  border: none;
-  box-shadow: 0 2px 10px #0003;
-}
-.cta-section .whatsapp-btn:hover {
-  background: var(--dourado);
-  color: var(--fundo-dark);
-}
-
-/* FOOTER */
-footer {
-  background: var(--fundo-dark);
-  color: var(--bronze);
-  padding: 0;
-  margin-top: 54px;
-  font-family: var(--fonte-titulo);
-  font-size: 1.03rem;
-  position: relative;
-}
-.footer-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 18px 22px 10px 22px;
-}
-.footer-logo-link {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
-.footer-logo {
-  width: 110px;
-  height: auto;
-  filter: drop-shadow(0 4px 20px #cab17988) brightness(1.10);
-  background: #fff;
-  border-radius: 14px;
-  padding: 3px 7px;
-  margin-right: 12px;
-  border: 1px solid #cab17944;
-}
-.footer-copy {
-  flex: 1 1 auto;
-  text-align: left;
-  color: var(--bronze);
-  font-family: var(--fonte-titulo);
-  font-size: 1rem;
-  margin-left: 0;
-}
-.footer-social {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-.footer-social a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--bronze);
-  border-radius: 50%;
-  width: 38px;
-  height: 38px;
-  margin-left: 0;
-  transition: background 0.18s;
-  border: none;
-  text-decoration: none;
-}
-.footer-social a img {
-  width: 22px;
-  height: 22px;
-  display: block;
-  margin: auto;
-}
-.footer-social a:hover {
-  background: var(--dourado);
-}
-@media (max-width: 700px) {
-  .footer-inner {
-    flex-direction: column;
-    gap: 10px;
-    align-items: flex-start;
-    text-align: left;
-    padding: 18px 8px 10px 8px;
-  }
-  .footer-social {
-    margin-top: 8px;
-  }
-}
+  <footer>
+    <p>&copy; Sky Mario Guimarães - Todos os direitos reservados</p>
+  </footer>
+</body>
+</html>
