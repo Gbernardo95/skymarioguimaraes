@@ -1,20 +1,11 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const form = document.getElementById('contato-form');
-  if (form) {
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      window.location.href = 'obrigado.html';
-    });
-  }
-});
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    const href = this.getAttribute('href');
-    if (href.length > 1 && document.querySelector(href)) {
-      e.preventDefault();
-      document.querySelector(href).scrollIntoView({
-        behavior: 'smooth'
-      });
-    }
+// Menu suspenso responsivo
+const toggleBtn = document.querySelector('.navbar-toggle');
+const menu = document.querySelector('.navbar-menu');
+if (toggleBtn && menu) {
+  toggleBtn.addEventListener('click', () => {
+    menu.classList.toggle('open');
   });
-});
+  document.querySelectorAll('.navbar-menu a').forEach(link => {
+    link.addEventListener('click', () => { menu.classList.remove('open'); });
+  });
+}
