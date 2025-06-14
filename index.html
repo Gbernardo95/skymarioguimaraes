@@ -1,86 +1,104 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sky Mario Guimarães</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
-</head>
-<body>
-  <header class="topo">
-    <div class="container">
-      <h1 class="logo">Sky Mario Guimarães</h1>
-      <nav>
-        <ul class="menu">
-          <li><a href="#caracteristicas">Características</a></li>
-          <li><a href="#galeria">Galeria</a></li>
-          <li><a href="#localizacao">Localização</a></li>
-          <li><a href="#formulario">Cadastro</a></li>
-        </ul>
-      </nav>
+import React from 'react';
+import './Home.css'; // Crie um CSS semelhante à paleta da imagem
+
+export default function Home() {
+  return (
+    <div className="home-sky-mario">
+      {/* Header */}
+      <header className="sky-header">
+        <div className="logo">SKY MARIO GUIMARÃES</div>
+        <nav>
+          <a href="#empreendimento">Sobre</a>
+          <a href="#apartamentos">Apartamentos</a>
+          <a href="#galeria">Galeria</a>
+          <a href="#localizacao">Localização</a>
+          <a href="#contato" className="btn-nav">Agende Sua Visita</a>
+        </nav>
+      </header>
+
+      {/* Hero Section */}
+      <section className="hero">
+        <h1>Bem-vindo(a) ao Sky Mario Guimarães</h1>
+        <p>
+          Viva o alto padrão em um dos endereços mais exclusivos de Guimarães. Experimente o verdadeiro significado de morar bem.
+        </p>
+        <a className="cta-btn" href="#contato">TENHO INTERESSE EM AGENDAR UMA VISITA</a>
+        <div className="features">
+          <div>Vista panorâmica incrível</div>
+          <div>Áreas de lazer completas</div>
+          <div>Segurança 24h</div>
+          <div>Localização privilegiada</div>
+        </div>
+      </section>
+
+      {/* Sobre o empreendimento */}
+      <section id="empreendimento" className="sobre">
+        <div className="sobre-img" />
+        <div className="sobre-info">
+          <h2>Um novo ícone no skyline de Guimarães</h2>
+          <p>
+            O Sky Mario Guimarães é mais que um prédio: é o seu novo lar, projetado para quem busca exclusividade, conforto e sofisticação. Com arquitetura moderna, áreas verdes e lazer para toda família.
+          </p>
+          <a className="btn-sec" href="#ficha">VER FICHA TÉCNICA</a>
+        </div>
+      </section>
+
+      {/* Apartamentos */}
+      <section id="apartamentos" className="apartamentos">
+        <div className="apt-info">
+          <h3>Seu Refúgio nas Alturas</h3>
+          <ul>
+            <li>Apartamentos de 2 a 4 quartos, todos com suítes</li>
+            <li>Vagas de garagem coberta</li>
+            <li>Varanda gourmet com vista exclusiva</li>
+            <li>Fechadura eletrônica em todas as unidades</li>
+            <li>Lazer completo: piscina, academia, salão de festas</li>
+          </ul>
+          <a className="btn-sec" href="#contato">FALE COM UM CORRETOR</a>
+        </div>
+        <div className="apt-img" />
+      </section>
+
+      {/* Galeria */}
+      <section id="galeria" className="galeria">
+        <h3>Vislumbre o Sky Mario Guimarães</h3>
+        <div className="galeria-slider">
+          <div className="galeria-img galeria-img1" />
+          <div className="galeria-img galeria-img2" />
+          <div className="galeria-img galeria-img3" />
+        </div>
+      </section>
+
+      {/* Localização */}
+      <section id="localizacao" className="localizacao">
+        <div>
+          <h4>Localização Privilegiada</h4>
+          <p>
+            O Sky Mario Guimarães está no coração da cidade, próximo a tudo que importa: supermercados, escolas, hospitais e vias de acesso rápido.
+          </p>
+          <a className="btn-sec" href="#contato">QUERO CONHECER O LOCAL!</a>
+        </div>
+        <div className="mapa">
+          {/* Incorpore o mapa aqui via iframe ou imagem */}
+        </div>
+      </section>
+
+      {/* Agende uma visita */}
+      <section id="contato" className="visita">
+        <h4>Agende uma visita e conheça o Sky Mario Guimarães</h4>
+        <p>
+          Não perca a oportunidade de morar no melhor endereço. Entre em contato para agendar sua visita!
+        </p>
+        <a className="cta-btn" href="https://wa.me/seunumerowhatsapp" target="_blank" rel="noopener noreferrer">
+          QUERO CONHECER O SKY MARIO GUIMARÃES!
+        </a>
+      </section>
+
+      {/* Footer */}
+      <footer className="sky-footer">
+        <div className="logo-footer">SKY MARIO GUIMARÃES</div>
+        <div>© {new Date().getFullYear()} Sky Mario Guimarães - Todos os direitos reservados.</div>
+      </footer>
     </div>
-  </header>
-
-  <section class="hero">
-    <div class="container">
-      <div class="titulo-box">
-        <h2 class="titulo">Sky Mario Guimarães</h2>
-        <p class="subtitulo">2 e 3 quartos com suítes, varanda gourmet e lazer premium</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="caracteristicas" class="caracteristicas">
-    <div class="container">
-      <h3>Características do Empreendimento</h3>
-      <ul>
-        <li>Blocos com apartamentos de 2 e 3 quartos (tipo e UpGardens)</li>
-        <li>Varanda gourmet em todas as unidades</li>
-        <li>Rooftop com Skybar, Winebar, Espaço Gourmet e mais</li>
-        <li>Lazer completo: piscina, academia, spa, brinquedoteca, petcare</li>
-        <li>Entrada facilitada e financiamento via Caixa</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="galeria" class="galeria">
-    <div class="container">
-      <h3>Galeria de Imagens</h3>
-      <div class="imagens">
-        <img src="perspectiva-1.jpg" alt="Fachada do empreendimento">
-        <img src="perspectiva-2.jpg" alt="Vista da varanda gourmet">
-        <img src="novaiguacu-aerea.jpg" alt="Vista aérea da localização">
-      </div>
-    </div>
-  </section>
-
-  <section id="localizacao" class="localizacao">
-    <div class="container">
-      <h3>Localização Privilegiada</h3>
-      <p>Rua Doutor Mário Guimarães, Nova Iguaçu - ao lado do Hotel Mercure, no coração da cidade.</p>
-      <img src="mapa-nova-iguacu.jpg" alt="Mapa localização Sky Mario Guimarães">
-    </div>
-  </section>
-
-  <section id="formulario" class="formulario">
-    <div class="container">
-      <h3>Cadastre-se para se antecipar ao lançamento</h3>
-      <form action="agradecimento.html" method="POST">
-        <input type="text" name="nome" placeholder="Seu nome" required>
-        <input type="email" name="email" placeholder="Seu e-mail" required>
-        <input type="tel" name="telefone" placeholder="Seu telefone" required>
-        <button type="submit">Quero ser avisado</button>
-      </form>
-    </div>
-  </section>
-
-  <a href="https://wa.me/5521980273260" class="whatsapp" target="_blank">
-    <img src="whatsapp-icon.png" alt="Fale no WhatsApp">
-  </a>
-
-  <footer>
-    <p>&copy; Sky Mario Guimarães - Todos os direitos reservados</p>
-  </footer>
-</body>
-</html>
+  );
+}
