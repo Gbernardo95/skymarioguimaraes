@@ -3,99 +3,133 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Obrigado pelo seu cadastro!</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <title>Obrigado pelo Cadastro | Sky Mario Guimarães</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --vinho: #7B112C;
+      --vinho-dark: #4A0A1D;
+      --dourado: #BFA14A;
+      --branco: #fff;
+      --cinza: #ececec;
+      --fonte-titulo: 'Playfair Display', serif;
+      --fonte-corpo: 'Roboto', sans-serif;
+    }
     body {
-      background: #181818;
-      color: #BFA14A;
-      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--vinho) 60%, var(--vinho-dark) 100%);
+      color: var(--branco);
+      font-family: var(--fonte-corpo);
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-      margin: 0;
+      flex-direction: column;
+      text-align: center;
+      padding: 0 12px;
+    }
+    .agradecimento-container {
+      background: rgba(255,255,255,0.06);
+      border-radius: 24px;
+      box-shadow: 0 6px 32px #4A0A1D55;
+      padding: 48px 30px 36px 30px;
+      max-width: 400px;
+      margin: 30px auto;
+      border: 2.5px solid var(--dourado);
+      position: relative;
+    }
+    .logo-obrigado {
+      width: 110px;
+      height: auto;
+      display: block;
+      margin: 0 auto 22px auto;
+      background: var(--branco);
+      border-radius: 16px;
+      padding: 9px 18px 6px 18px;
+      box-shadow: 0 3px 18px #BFA14A44;
+      filter: drop-shadow(0 6px 20px #BFA14A77);
     }
     h1 {
-      font-family: 'Cinzel', serif;
-      font-size: 2.4rem;
-      margin-bottom: 18px;
+      font-family: var(--fonte-titulo);
+      color: var(--dourado);
+      font-size: 2rem;
+      margin-bottom: 12px;
+      margin-top: 5px;
     }
     p {
-      color: #fff;
-      font-size: 1.2rem;
-      margin-bottom: 30px;
+      font-size: 1.14rem;
+      color: var(--branco);
+      margin-bottom: 18px;
+      margin-top: 0;
     }
-    a {
-      background: #BFA14A;
-      color: #181818;
-      padding: 14px 36px;
-      border-radius: 30px;
+    .cta-btn {
+      background: var(--dourado);
+      color: var(--vinho-dark);
+      padding: 12px 38px;
+      border: none;
+      border-radius: 32px;
+      font-size: 1.07rem;
+      font-family: var(--fonte-titulo);
       text-decoration: none;
       font-weight: bold;
-      font-size: 1.1rem;
+      margin: 20px auto 0 auto;
+      display: inline-block;
+      box-shadow: 0 2px 12px #0002;
       transition: background 0.2s, color 0.2s;
+      letter-spacing: 1px;
+      cursor: pointer;
     }
-    a:hover {
-      background: #C0392B;
-      color: #fff;
+    .cta-btn:hover {
+      background: var(--vinho);
+      color: var(--dourado);
+    }
+    .whatsapp-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 18px;
+      background: var(--dourado);
+      color: var(--vinho-dark);
+      border-radius: 22px;
+      padding: 9px 18px;
+      font-size: 1.04rem;
+      font-family: var(--fonte-corpo);
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .whatsapp-link img {
+      width: 26px;
+      height: 26px;
+    }
+    .whatsapp-link:hover {
+      background: var(--vinho);
+      color: var(--dourado);
+    }
+    @media (max-width: 540px) {
+      .agradecimento-container {
+        padding: 32px 3vw 25px 3vw;
+        max-width: 98vw;
+      }
+      h1 { font-size: 1.3rem;}
     }
   </style>
 </head>
 <body>
-  <h1>Obrigado pelo cadastro!</h1>
-  <p>Em breve um consultor entrará em contato para apresentar as melhores oportunidades do Sky Mario Guimarães.</p>
-  <a href="index.html">Voltar para a página inicial</a>
-</body>
-</html><!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Obrigado pelo seu cadastro!</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      background: #181818;
-      color: #BFA14A;
-      font-family: 'Montserrat', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-    }
-    h1 {
-      font-family: 'Cinzel', serif;
-      font-size: 2.4rem;
-      margin-bottom: 18px;
-    }
-    p {
-      color: #fff;
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-    }
-    a {
-      background: #BFA14A;
-      color: #181818;
-      padding: 14px 36px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1rem;
-      transition: background 0.2s, color 0.2s;
-    }
-    a:hover {
-      background: #C0392B;
-      color: #fff;
-    }
-  </style>
-</head>
-<body>
-  <h1>Obrigado pelo cadastro!</h1>
-  <p>Em breve um consultor entrará em contato para apresentar as melhores oportunidades do Sky Mario Guimarães.</p>
-  <a href="index.html">Voltar para a página inicial</a>
+  <div class="agradecimento-container">
+    <img class="logo-obrigado" src="https://i.ibb.co/MkWVw058/C-pia-de-450-6-LOGOS-SKY-V1-C-aprovada-curvas-Prancheta-1.png" alt="Logo Sky Mario Guimarães">
+    <h1>Cadastro realizado com sucesso!</h1>
+    <p>
+      Agradecemos pelo seu interesse.<br>
+      Em breve nossa equipe entrará em contato com todas as informações e condições exclusivas.<br>
+      Fique atento ao seu e-mail e WhatsApp!
+    </p>
+    <a href="index.html" class="cta-btn">Voltar para o site</a>
+    <br>
+    <a class="whatsapp-link" href="https://wa.me/message/BOD7PZGF3RWLF1" target="_blank">
+      <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp">
+      Fale conosco no WhatsApp
+    </a>
+  </div>
 </body>
 </html>
