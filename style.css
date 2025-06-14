@@ -1,151 +1,529 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sky Mario Guimarães</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Playfair Display', serif;
-      background-color: #0f1f1a;
-      color: #d6c7a1;
-    }
-    header, footer {
-      background-color: #09130f;
-      color: #d6c7a1;
-      padding: 1rem;
-      text-align: center;
-    }
-    nav ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: #d6c7a1;
-      font-weight: bold;
-    }
-    .hero {
-      background: url('banner.jpg') no-repeat center center/cover;
-      text-align: left;
-      padding: 4rem 2rem;
-    }
-    .titulo {
-      font-size: 3rem;
-      margin: 0;
-      color: #d6c7a1;
-    }
-    .subtitulo {
-      font-size: 1.5rem;
-      margin-top: 1rem;
-      color: #d6c7a1;
-    }
-    section {
-      padding: 3rem 2rem;
-    }
-    .caracteristicas ul, .formulario form {
-      max-width: 800px;
-      margin: auto;
-    }
-    .caracteristicas li {
-      margin-bottom: 1rem;
-    }
-    .galeria img, .localizacao img {
-      width: 100%;
-      max-width: 500px;
-      display: block;
-      margin: 1rem auto;
-      border-radius: 8px;
-    }
-    form input, form button {
-      display: block;
-      width: 100%;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      border-radius: 8px;
-      border: none;
-    }
-    form button {
-      background-color: #d6c7a1;
-      color: #0f1f1a;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 1000;
-    }
-    .whatsapp img {
-      width: 60px;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Sky Mario Guimarães</h1>
-    <nav>
-      <ul>
-        <li><a href="#caracteristicas">Características</a></li>
-        <li><a href="#galeria">Galeria</a></li>
-        <li><a href="#localizacao">Localização</a></li>
-        <li><a href="#formulario">Cadastro</a></li>
-      </ul>
-    </nav>
-  </header>
+:root {
+  --green: #1e2b26;
+  --green-dark: #101e1a;
+  --gold: #e6c99c;
+  --gold-light: #f7ecd5;
+  --bronze: #cab179;
+  --white: #fff;
+  --gray: #b5b5b8;
+  --fonte-titulo: 'Playfair Display', serif;
+  --fonte-corpo: 'Roboto', sans-serif;
+}
+body {
+  margin: 0;
+  background: var(--green-dark);
+  color: var(--gold-light);
+  font-family: var(--fonte-corpo);
+  font-size: 1.1rem;
+}
+.topbar {
+  background: var(--green);
+  color: var(--gold);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  text-align: center;
+  padding: 8px 0;
+}
+.header {
+  background: var(--green);
+  box-shadow: 0 3px 16px #0003;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  height: 68px;
+}
+.logo-title .logo-name {
+  color: var(--gold);
+  font-family: var(--fonte-titulo);
+  font-size: 2.0rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  line-height: 1.1;
+}
+.logo-title .logo-name span {
+  font-size: 1.1rem;
+  font-family: var(--fonte-titulo);
+  color: var(--gold-light);
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+.nav ul li a {
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.02rem;
+  padding: 4px 6px;
+  transition: color .18s;
+  font-family: var(--fonte-corpo);
+}
+.nav ul li a:hover { color: var(--white);}
+.header-cta {
+  margin-left: 28px;
+  background: var(--gold);
+  color: var(--green-dark);
+  border-radius: 20px;
+  padding: 10px 22px;
+  font-weight: 700;
+  text-decoration: none;
+  font-family: var(--fonte-corpo);
+  font-size: 1.03rem;
+  box-shadow: 0 2px 10px #0002;
+  border: none;
+  transition: background .18s, color .18s;
+}
+.header-cta:hover { background: var(--bronze); color: var(--green-dark);}
+@media (max-width:900px) {
+  .header-inner { flex-direction: column; align-items: flex-start; height: auto;}
+  .nav { width: 100%; }
+  .nav ul { flex-direction: column; gap: 0; width: 100%; }
+  .nav ul li a { display: block; padding: 15px 0 15px 20px; border-bottom: 1px solid #e6c99c20;}
+  .header-cta { margin: 12px 0 0 0; width: 100%; text-align: center;}
+}
 
-  <section class="hero">
-    <h2 class="titulo">Sky Mario Guimarães</h2>
-    <p class="subtitulo">2 e 3 quartos com suítes, varanda gourmet e lazer premium</p>
-  </section>
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 540px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--green-dark);
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('https://i.ibb.co/VRR1T6q/Whats-App-Image-2025-06-09-at-16-30-39.webp') center center/cover no-repeat;
+  opacity: 0.42;
+  z-index: 0;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 74px 20px 60px 20px;
+  background: rgba(30,43,38,0.80);
+  border-radius: 24px;
+  box-shadow: 0 8px 44px #0008;
+}
+.hero-content h1 {
+  font-family: var(--fonte-titulo);
+  color: var(--gold);
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.hero-content p {
+  color: var(--gold-light);
+  font-size: 1.16rem;
+  margin-bottom: 28px;
+  font-family: var(--fonte-corpo);
+}
+.btn-main {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--green-dark);
+  border-radius: 22px;
+  padding: 15px 46px;
+  font-family: var(--fonte-titulo);
+  font-weight: bold;
+  font-size: 1.08rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+  margin: 18px auto 0 auto;
+  transition: background .19s, color .19s;
+  box-shadow: 0 2px 12px #0002;
+  border: none;
+  cursor: pointer;
+}
+.btn-main.dark { background: var(--green); color: var(--gold); border: 2px solid var(--gold);}
+.btn-main.small { padding: 10px 20px; font-size: 1rem; }
+.btn-main:hover, .btn-main.dark:hover { background: var(--bronze); color: var(--green-dark);}
+.btn-secondary {
+  display: inline-block;
+  background: none;
+  color: var(--gold);
+  border: 2px solid var(--gold);
+  border-radius: 22px;
+  padding: 12px 38px;
+  font-family: var(--fonte-titulo);
+  font-size: 1.08rem;
+  font-weight: bold;
+  margin: 24px 0 0 0;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background .2s, color .2s;
+}
+.btn-secondary:hover { background: var(--gold); color: var(--green-dark);}
+.hero-icons {
+  display: flex;
+  justify-content: center;
+  gap: 52px;
+  margin: 52px auto 0 auto;
+  max-width: 780px;
+  border-top: 1px solid #e6c99c33;
+  padding-top: 32px;
+}
+.hero-icons > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+}
+.hero-icons img { width: 38px; height: 38px;}
+.hero-icons span {
+  margin-top: 4px;
+  color: var(--gold-light);
+  font-size: 0.97rem;
+  font-family: var(--fonte-corpo);
+}
+@media (max-width:700px) {
+  .hero-content { padding: 36px 12px 30px 12px; }
+  .hero-icons { flex-direction: column; gap: 18px; padding-top: 15px;}
+}
 
-  <section id="caracteristicas">
-    <h3>Características do Empreendimento</h3>
-    <ul>
-      <li>Blocos com apartamentos de 2 e 3 quartos (tipo e UpGardens)</li>
-      <li>Varanda gourmet em todas as unidades</li>
-      <li>Rooftop com Skybar, Winebar, Espaço Gourmet e mais</li>
-      <li>Lazer completo: piscina, academia, spa, brinquedoteca, petcare</li>
-      <li>Entrada facilitada e financiamento via Caixa Econômica</li>
-    </ul>
-  </section>
+/* EXPERIENCE SECTION */
+.experience-section {
+  background: #1e2b26;
+  padding: 72px 0 0 0;
+}
+.exp-box {
+  display: flex;
+  align-items: center;
+  max-width: 1080px;
+  margin: 0 auto 54px auto;
+  gap: 42px;
+  padding: 0 18px;
+}
+.exp-box.invert { flex-direction: row-reverse; }
+.exp-img {
+  flex: 0 0 360px;
+  width: 360px;
+  height: 320px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #101e1a;
+  box-shadow: 0 2px 26px #0005;
+  border: 3px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.exp-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.exp-desc {
+  flex: 1 1 440px;
+  min-width: 250px;
+  padding: 0 6px;
+}
+.exp-desc h2, .exp-desc h3 {
+  font-family: var(--fonte-titulo);
+  color: var(--gold);
+  margin-bottom: 13px;
+  font-size: 1.42rem;
+}
+.exp-desc p {
+  color: var(--gold-light);
+  font-size: 1.13rem;
+}
+.exp-desc ul {
+  color: var(--gold-light);
+  font-size: 1.08rem;
+  margin-bottom: 20px;
+  margin-top: 0;
+  padding-left: 18px;
+  line-height: 2;
+}
+@media (max-width:1000px) {
+  .exp-box { flex-direction: column; gap: 26px; }
+  .exp-box.invert { flex-direction: column; }
+  .exp-img { width: 85vw; max-width: 450px; height: 230px; min-width: 200px; }
+}
 
-  <section id="galeria">
-    <h3>Galeria de Imagens</h3>
-    <img src="perspectiva-1.jpg" alt="Fachada do empreendimento">
-    <img src="perspectiva-2.jpg" alt="Vista da varanda gourmet">
-    <img src="novaiguacu-aerea.jpg" alt="Vista aérea da localização">
-  </section>
+/* GALLERY */
+.gallery-section {
+  padding: 70px 0 0 0;
+  background: var(--green-dark);
+  text-align: center;
+}
+.gallery-section h2 {
+  font-family: var(--fonte-titulo);
+  color: var(--gold);
+  margin-bottom: 24px;
+  font-size: 1.5rem;
+}
+.gallery-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 26px;
+}
+.gallery-tabs button {
+  background: none;
+  border: none;
+  color: var(--gold);
+  font-family: var(--fonte-titulo);
+  font-size: 1.01rem;
+  padding: 8px 24px;
+  border-radius: 22px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background .15s, color .15s;
+}
+.gallery-tabs button.active, .gallery-tabs button:hover {
+  background: var(--gold);
+  color: var(--green-dark);
+}
+.gallery-carousel {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+.gallery-item {
+  background: var(--green);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 18px #0002;
+  border: 2px solid var(--gold);
+  width: 284px;
+  height: 190px;
+  transition: transform .18s;
+  cursor: pointer;
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .18s;
+}
+.gallery-item:hover {
+  transform: scale(1.04);
+  box-shadow: 0 4px 36px #cab17977;
+  border-color: var(--bronze);
+}
+@media (max-width:600px) {
+  .gallery-item { width: 96vw; height: 38vw; min-height: 130px; }
+}
 
-  <section id="localizacao">
-    <h3>Localização Privilegiada</h3>
-    <p>Rua Doutor Mário Guimarães, Nova Iguaçu - ao lado do Hotel Mercure, no coração da cidade.</p>
-    <img src="mapa-nova-iguacu.jpg" alt="Mapa localização Sky Mario Guimarães">
-  </section>
+/* LIGHTBOX */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.84);
+  justify-content: center;
+  align-items: center;
+}
+.lightbox-content {
+  max-width: 98vw;
+  max-height: 90vh;
+  border-radius: 16px;
+  box-shadow: 0 6px 40px #cab179;
+  border: 4px solid var(--gold);
+  display: block;
+}
+.lightbox .close {
+  color: var(--gold);
+  position: absolute;
+  top: 25px;
+  right: 48px;
+  font-size: 3.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10001;
+  transition: color .2s;
+}
+.lightbox .close:hover { color: var(--bronze); }
 
-  <section id="formulario">
-    <h3>Cadastre-se para se antecipar ao lançamento</h3>
-    <form action="agradecimento.html" method="POST">
-      <input type="text" name="nome" placeholder="Seu nome" required>
-      <input type="email" name="email" placeholder="Seu e-mail" required>
-      <input type="tel" name="telefone" placeholder="Seu telefone" required>
-      <button type="submit">Quero ser avisado</button>
-    </form>
-  </section>
+/* LOCATION */
+.location-section {
+  background: #1e2b26;
+  padding: 80px 0 0 0;
+}
+.location-content {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  gap: 54px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 18px;
+}
+.location-info {
+  flex: 1 1 340px;
+  min-width: 260px;
+}
+.location-info h2 {
+  font-family: var(--fonte-titulo);
+  color: var(--gold);
+  font-size: 1.32rem;
+  margin-bottom: 18px;
+}
+.location-info p {
+  color: var(--gold-light);
+  font-size: 1.13rem;
+  margin-bottom: 22px;
+}
+.location-map {
+  flex: 0 0 410px;
+  width: 410px;
+  height: 280px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 18px #0003;
+  border: 2px solid var(--gold);
+}
+.location-map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+@media (max-width:1000px) {
+  .location-content { flex-direction: column; gap: 24px; }
+  .location-map { width: 98vw; max-width: 430px; height: 180px; }
+}
 
-  <a href="https://wa.me/5521980273260" class="whatsapp" target="_blank">
-    <img src="whatsapp-icon.png" alt="Fale no WhatsApp">
-  </a>
+/* AGENDAR */
+.agende-section {
+  position: relative;
+  background: linear-gradient(90deg, #e6c99c 0%, #cab179 100%);
+  padding: 90px 16px 70px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.agende-bg {
+  position: absolute;
+  inset: 0;
+  background: url('https://i.ibb.co/VRR1T6q/Whats-App-Image-2025-06-09-at-16-30-39.webp') center center/cover no-repeat;
+  opacity: 0.22;
+  z-index: 0;
+}
+.agende-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.agende-content h2 {
+  color: var(--green-dark);
+  font-family: var(--fonte-titulo);
+  font-size: 2.1rem;
+  margin-bottom: 18px;
+}
+.agende-content p {
+  color: var(--green-dark);
+  font-size: 1.15rem;
+  margin-bottom: 28px;
+}
+.agende-content .btn-main.dark {
+  color: var(--gold);
+  background: var(--green-dark);
+  border: 2px solid var(--gold);
+  font-size: 1.1rem;
+  padding: 16px 38px;
+}
+.agende-content .btn-main.dark:hover {
+  background: var(--gold);
+  color: var(--green-dark);
+}
+@media (max-width:600px) {
+  .agende-content h2 { font-size: 1.3rem; }
+  .agende-section { padding: 44px 6px 34px 6px;}
+}
 
-  <footer>
-    <p>&copy; Sky Mario Guimarães - Todos os direitos reservados</p>
-  </footer>
-</body>
-</html>
+/* FOOTER */
+footer {
+  background: var(--green);
+  color: var(--gold);
+  padding: 0;
+  font-family: var(--fonte-titulo);
+  font-size: 1.03rem;
+  position: relative;
+}
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 18px 10px 18px;
+}
+.footer-brand .logo-name {
+  color: var(--gold);
+  font-family: var(--fonte-titulo);
+  font-size: 2.0rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  line-height: 1.1;
+}
+.footer-brand .logo-name span {
+  font-size: 1.1rem;
+  color: var(--gold-light);
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--green-dark);
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  transition: background 0.18s;
+  border: none;
+  text-decoration: none;
+}
+.footer-social a img {
+  width: 23px;
+  height: 23px;
+  display: block;
+  margin: auto;
+}
+.footer-social a:hover { background: var(--gold);}
+.footer-copy {
+  text-align: center;
+  color: var(--gold-light);
+  font-size: 0.98rem;
+  padding: 12px 0 8px 0;
+  background: #18261b;
+}
+@media (max-width:700px) {
+  .footer-content { flex-direction: column; gap: 10px; align-items: flex-start; padding: 18px 8px 10px 8px;}
+  .footer-brand { margin-bottom: 10px;}
+}
