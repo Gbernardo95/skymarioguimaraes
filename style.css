@@ -1,64 +1,114 @@
-/* style.css */
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #541f07;
-  color: #79603a;
-  font-family: 'Playfair Display', serif;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sky Mario Guimarães</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="topo">
+    <div class="container">
+      <h1>Sky Mario Guimarães</h1>
+      <nav>
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#imoveis">Apartamentos</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#localizacao">Localização</a></li>
+          <li><a class="btn-visita" href="#formulario">Agende sua visita</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-a {
-  color: #79603a;
-  text-decoration: none;
-}
+  <section class="hero">
+    <h2>Bem-vindo(a) ao Sky Mario Guimarães. Seu novo lar suspenso em Nova Iguaçu.</h2>
+    <p>Descubra o lançamento mais aguardado da cidade com varanda gourmet, lazer Premium e entrada facilitada.</p>
+    <a href="#formulario" class="btn">TENHO INTERESSE EM AGENDAR UMA VISITA!</a>
+  </section>
 
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 1rem;
-}
+  <section class="destaques">
+    <div class="container">
+      <ul>
+        <li>Entrada facilitada direto com a construtora</li>
+        <li>Varanda gourmet nos apartamentos</li>
+        <li>Lazer Premium com rooftop completo</li>
+        <li>Localização privilegiada no coração de Nova Iguaçu</li>
+      </ul>
+    </div>
+  </section>
 
-header {
-  background-color: #3a1405;
-  padding: 1rem 0;
-}
+  <section id="sobre" class="sobre">
+    <div class="container">
+      <h3>Uma imersião no estilo de vida elevado</h3>
+      <p>Sky Mario Guimarães é um projeto que une sofisticação, conforto e praticidade, oferecendo uma experiência residencial diferenciada para quem busca mais qualidade de vida. Localizado na Rua Doutor Mário Guimarães, após o Hotel Mercure, este pré-lançamento é assinado por uma incorporadora com ampla experiência.</p>
+      <a href="#formulario" class="btn">VER FICHA TÉCNICA</a>
+    </div>
+  </section>
 
-header h1 {
-  margin: 0;
-  font-size: 2rem;
-}
+  <section id="imoveis" class="tipos">
+    <div class="container">
+      <h3>Seu Novo Refúgio em Nova Iguaçu</h3>
+      <p>Blocos 1 e 2 com opções de 2 e 3 quartos tipo e UpGardens.</p>
+      <ul>
+        <li>2 qts Tipo: 52,87m² a 54,58m² (312 unidades)</li>
+        <li>3 qts Tipo: 61,81m² (156 unidades)</li>
+        <li>2 qts UpGardens: 78m² a 97m² (14 unidades)</li>
+        <li>3 qts UpGardens: 104m² a 132m² (6 unidades)</li>
+      </ul>
+    </div>
+  </section>
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-  padding: 0;
-}
+  <section id="galeria" class="galeria">
+    <div class="container">
+      <h3>Vislumbre a vida no Sky Mario Guimarães</h3>
+      <div class="carousel">
+        <img src="perspectiva-1.jpg" alt="Imagem ilustrativa 1">
+        <img src="perspectiva-2.jpg" alt="Imagem ilustrativa 2">
+        <img src="novaiguacu-aerea.jpg" alt="Vista aérea Nova Iguaçu">
+      </div>
+    </div>
+  </section>
 
-nav .btn-visita {
-  background-color: #79603a;
-  color: #541f07;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-}
+  <section id="lazer" class="lazer">
+    <div class="container">
+      <h3>Lazer Premium em Todos os Ambientes</h3>
+      <ul>
+        <li>Piscinas adulto e infantil, deck molhado, lounge externo</li>
+        <li>Academia completa, bike indoor, espaço ioga e spa</li>
+        <li>Skybar, winebar, gourmet, salão de festas e rooftop party</li>
+        <li>Brinquedoteca, play aventura, petcare, sala de embarque</li>
+      </ul>
+    </div>
+  </section>
 
-.hero {
-  text-align: center;
-  padding: 4rem 2rem;
-}
+  <section id="localizacao" class="localizacao">
+    <div class="container">
+      <h3>Localização Privilegiada</h3>
+      <p>Localizado na Rua Doutor Mário Guimarães, em Nova Iguaçu, próximo ao Hotel Mercure, com fácil acesso a comércio, escolas, hospitais e transporte.</p>
+      <img src="mapa-nova-iguacu.jpg" alt="Mapa de Nova Iguaçu">
+      <a href="#formulario" class="btn">QUERO CONHECER O LOCAL!</a>
+    </div>
+  </section>
 
-.hero .btn {
-  background-color: #79603a;
-  color: #541f07;
-  padding: 1rem 2rem;
-  font-weight: bold;
-  border-radius: 8px;
-  display: inline-block;
-  margin-top: 2rem;
-}
+  <section id="formulario" class="formulario">
+    <div class="container">
+      <h3>Agende uma visita e conheça o Sky Mario Guimarães</h3>
+      <p>Não perca essa chance de garantir o melhor lançamento da cidade. Cadastre-se para se antecipar.</p>
+      <form action="https://formsubmit.co/gabriel.bernardo.rivavendas@gmail.com" method="POST">
+        <input type="text" name="nome" placeholder="Seu nome completo" required>
+        <input type="email" name="email" placeholder="Seu e-mail" required>
+        <input type="tel" name="telefone" placeholder="Seu telefone" required>
+        <button type="submit">QUERO ME CADASTRAR</button>
+      </form>
+      <a href="https://wa.me/5521980273260" class="btn">Falar com um consultor via WhatsApp</a>
+    </div>
+  </section>
 
-footer {
-  text-align: center;
-  padding: 2rem;
-  background-color: #3a1405;
-}
+  <footer>
+    <p>Sky Mario Guimarães | Todos os direitos reservados</p>
+  </footer>
+</body>
+</html>
